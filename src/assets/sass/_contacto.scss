@@ -41,7 +41,7 @@
                 margin-left: 50px;
                 margin-right: 50px;
                 text-align: left;
-                color: #76674ac4;
+                color: $colorletra;
             }
             #mabel{
                 height: 40%;
@@ -125,6 +125,7 @@
             display: block;
             text-align: center;
             padding: 20px;
+            margin-bottom: 30px;
 
             .cuadrado{
                 display: block;
@@ -163,6 +164,7 @@
                 margin-left: 20%;
             }
     
+
             input{
                 width: 60%;
                 height: 30px;
@@ -172,6 +174,8 @@
                 display: block;
                 margin-left: 20%;
             }
+
+           
             textarea{
                 width: 60%;
                 height: 100px;

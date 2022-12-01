@@ -101,6 +101,8 @@ header .headerbusqueda input {
   padding: 10px;
   border-radius: 20px;
   background-color: transparent;
+  color: #F2F6D0;
+  font-weight: 800;
 }
 header .headerbusqueda input:focus {
   outline: none;
@@ -120,11 +122,15 @@ header .headerbusqueda input::placeholder {
   font-size: 16px;
   font-weight: bolder;
 }
+header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+  margin-right: 5px;
+}
 header p {
   color: #F2F6D0;
   font-family: "Sura";
   margin-right: 15px;
   font-size: 1.25em;
+  margin-right: 20px;
 }
 header a {
   text-decoration: none;
@@ -315,6 +321,8 @@ header .headerbusqueda input {
   padding: 10px;
   border-radius: 20px;
   background-color: transparent;
+  color: #F2F6D0;
+  font-weight: 800;
 }
 header .headerbusqueda input:focus {
   outline: none;
@@ -334,11 +342,15 @@ header .headerbusqueda input::placeholder {
   font-size: 16px;
   font-weight: bolder;
 }
+header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+  margin-right: 5px;
+}
 header p {
   color: #F2F6D0;
   font-family: "Sura";
   margin-right: 15px;
   font-size: 1.25em;
+  margin-right: 20px;
 }
 header a {
   text-decoration: none;
@@ -407,7 +419,7 @@ footer .footerSesion p {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
   .inicio {
     display: flex;
     flex-flow: row;
@@ -437,6 +449,9 @@ footer .footerSesion p {
   }
   .inicio .bienvenida h1 {
     margin-top: 70px;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
   }
   .inicio .bienvenida p {
     font-size: 24px;
@@ -447,102 +462,88 @@ footer .footerSesion p {
   .inicio .bienvenida button {
     margin-bottom: 50px;
   }
-  .inicio .bienvenida button :hover {
-    background-color: #37718E;
-    color: #F2F6D0;
+  .inicio .bienvenida .redesSociales {
+    display: block;
+    position: absolute;
+    bottom: 0px;
   }
-  .inicio .bienvenida button a {
-    text-decoration: none;
-    color: #F2F6D0;
-    font-family: "Sura";
-    font-size: large;
-    font-size: 1.5rem;
-    font-weight: bold;
+  .inicio .bienvenida .redesSociales .redes {
+    padding: 5px;
   }
-  .inicio .bienvenida button a :visited {
-    text-decoration: none;
-  }
-  .rrss {
+  .personaje {
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 50%;
     position: absolute;
     bottom: 0%;
-    right: 20px;
+    right: 10px;
   }
-  .rrss .redes {
-    width: 34px;
-    height: 34px;
-  }
-  .rrss .personajes {
+  .personaje .personajes {
     width: 186px;
     height: 285px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 900px) {
+  header a {
+    font-size: 1.1em;
+  }
+  header button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
   .inicio .imagen2 {
     background-image: url("../img/leafpattern.png");
     background-repeat: repeat;
-    background-size: 20rem;
+    background-size: 40rem;
     width: 100%;
-    height: 87vh;
+    height: 50vh;
   }
   .inicio .imagen2 img {
-    width: auto;
+    width: 350px;
     height: auto;
+    display: block;
+    margin: auto;
+    padding: 10%;
   }
   .inicio .bienvenida {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    height: 87vh;
-  }
-  .inicio .bienvenida h1 {
-    margin-top: 70px;
-  }
-  .inicio .bienvenida p {
-    font-size: 24px;
-    margin-right: 50px;
-    margin-left: 50px;
+    display: inline;
     text-align: center;
+    margin: 20px;
   }
   .inicio .bienvenida button {
-    margin-bottom: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 300px;
   }
-  .inicio .bienvenida button :hover {
-    background-color: #37718E;
-    color: #F2F6D0;
+  .inicio .bienvenida p {
+    font-size: 20px;
   }
-  .inicio .bienvenida button a {
-    text-decoration: none;
-    color: #F2F6D0;
-    font-family: "Sura";
-    font-size: large;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  .inicio .bienvenida button a :visited {
-    text-decoration: none;
-  }
-  .rrss {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    width: 50%;
+  .inicio .bienvenida .redesSociales {
+    display: inline-block;
     position: absolute;
-    bottom: 0%;
+    bottom: 335px;
+    left: 30%;
+    align-items: center;
+  }
+  .inicio .bienvenida .redesSociales .redes {
+    padding: 10px;
+  }
+  .inicio .personaje {
+    display: inline;
+  }
+  .inicio .personaje #isabelle {
+    display: none;
+  }
+  .inicio .personaje .personajes {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 83%;
     right: 20px;
-  }
-  .rrss .redes {
-    width: 34px;
-    height: 34px;
-  }
-  .rrss .personajes {
-    width: 186px;
-    height: 285px;
   }
 }
 .formulario {
@@ -659,7 +660,7 @@ footer .footerSesion p {
     margin-left: 50px;
     margin-right: 50px;
     text-align: left;
-    color: rgba(118, 103, 74, 0.768627451);
+    color: rgba(118, 103, 74, 0.7725490196);
   }
   .contactanos .contactar1 #mabel {
     height: 40%;
@@ -731,6 +732,7 @@ footer .footerSesion p {
     display: block;
     text-align: center;
     padding: 20px;
+    margin-bottom: 30px;
   }
   .contactanos .contactar1 .cuadrado {
     display: block;

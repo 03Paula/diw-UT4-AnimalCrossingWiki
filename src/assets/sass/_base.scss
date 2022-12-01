@@ -121,6 +121,9 @@ header{
             padding:10px;
             border-radius: 20px;
             background-color: transparent;
+            color: $colorPrimario;
+            font-weight: 800;
+            
            
             &:focus{
                 outline: none;
@@ -131,8 +134,10 @@ header{
                 font-weight: bolder;
 
             }
+        }
 
-
+        .img-favorito, .imagenredonda{
+           margin-right: 5px;
         }
     }
     
@@ -141,6 +146,7 @@ header{
         font-family: 'Sura';
         margin-right: 15px;
         font-size: 1.25em;
+        margin-right: 20px;
     }
 
     a{

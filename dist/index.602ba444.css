@@ -98,9 +98,11 @@ header .headerbusqueda .busqueda img {
 }
 
 header .headerbusqueda input {
+  color: #f2f6d0;
   background-color: #0000;
   border-radius: 20px;
   padding: 10px;
+  font-weight: 800;
 }
 
 header .headerbusqueda input:focus {
@@ -125,9 +127,13 @@ header .headerbusqueda input::placeholder {
   font-weight: bolder;
 }
 
+header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+  margin-right: 5px;
+}
+
 header p {
   color: #f2f6d0;
-  margin-right: 15px;
+  margin-right: 20px;
   font-family: Sura;
   font-size: 1.25em;
 }
@@ -323,9 +329,11 @@ header .headerbusqueda .busqueda img {
 }
 
 header .headerbusqueda input {
+  color: #f2f6d0;
   background-color: #0000;
   border-radius: 20px;
   padding: 10px;
+  font-weight: 800;
 }
 
 header .headerbusqueda input:focus {
@@ -350,9 +358,13 @@ header .headerbusqueda input::placeholder {
   font-weight: bolder;
 }
 
+header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+  margin-right: 5px;
+}
+
 header p {
   color: #f2f6d0;
-  margin-right: 15px;
+  margin-right: 20px;
   font-family: Sura;
   font-size: 1.25em;
 }
@@ -429,7 +441,7 @@ footer .footerSesion p {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
   .inicio {
     min-width: 100%;
     flex-flow: row;
@@ -461,7 +473,10 @@ footer .footerSesion p {
   }
 
   .inicio .bienvenida h1 {
+    text-align: center;
     margin-top: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   .inicio .bienvenida p {
@@ -475,117 +490,102 @@ footer .footerSesion p {
     margin-bottom: 50px;
   }
 
-  .inicio .bienvenida button :hover {
-    color: #f2f6d0;
-    background-color: #37718e;
+  .inicio .bienvenida .redesSociales {
+    display: block;
+    position: absolute;
+    bottom: 0;
   }
 
-  .inicio .bienvenida button a {
-    color: #f2f6d0;
-    font-family: Sura;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
+  .inicio .bienvenida .redesSociales .redes {
+    padding: 5px;
   }
 
-  .inicio .bienvenida button a :visited {
-    text-decoration: none;
-  }
-
-  .rrss {
+  .personaje {
     width: 50%;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
     display: flex;
     position: absolute;
     bottom: 0%;
-    right: 20px;
+    right: 10px;
   }
 
-  .rrss .redes {
-    width: 34px;
-    height: 34px;
-  }
-
-  .rrss .personajes {
+  .personaje .personajes {
     width: 186px;
     height: 285px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 900px) {
+  header a {
+    font-size: 1.1em;
+  }
+
+  header button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
   .inicio .imagen2 {
     width: 100%;
-    height: 87vh;
+    height: 50vh;
     background-image: url("leafpattern.a0915d29.png");
     background-repeat: repeat;
-    background-size: 20rem;
+    background-size: 40rem;
   }
 
   .inicio .imagen2 img {
-    width: auto;
+    width: 350px;
     height: auto;
+    margin: auto;
+    padding: 10%;
+    display: block;
   }
 
   .inicio .bienvenida {
-    width: 50%;
-    height: 87vh;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-  }
-
-  .inicio .bienvenida h1 {
-    margin-top: 70px;
-  }
-
-  .inicio .bienvenida p {
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 24px;
+    margin: 20px;
+    display: inline;
   }
 
   .inicio .bienvenida button {
-    margin-bottom: 50px;
+    width: 300px;
+    margin: 20px auto auto;
+    display: block;
   }
 
-  .inicio .bienvenida button :hover {
-    color: #f2f6d0;
-    background-color: #37718e;
+  .inicio .bienvenida p {
+    font-size: 20px;
   }
 
-  .inicio .bienvenida button a {
-    color: #f2f6d0;
-    font-family: Sura;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  .inicio .bienvenida button a :visited {
-    text-decoration: none;
-  }
-
-  .rrss {
-    width: 50%;
-    flex-flow: row;
-    justify-content: space-around;
-    display: flex;
+  .inicio .bienvenida .redesSociales {
+    align-items: center;
+    display: inline-block;
     position: absolute;
-    bottom: 0%;
+    bottom: 335px;
+    left: 30%;
+  }
+
+  .inicio .bienvenida .redesSociales .redes {
+    padding: 10px;
+  }
+
+  .inicio .personaje {
+    display: inline;
+  }
+
+  .inicio .personaje #isabelle {
+    display: none;
+  }
+
+  .inicio .personaje .personajes {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 83%;
     right: 20px;
-  }
-
-  .rrss .redes {
-    width: 34px;
-    height: 34px;
-  }
-
-  .rrss .personajes {
-    width: 186px;
-    height: 285px;
   }
 }
 
@@ -708,7 +708,7 @@ footer .footerSesion p {
 
   .contactanos .contactar1 h6 {
     text-align: left;
-    color: #76674ac4;
+    color: #76674ac5;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -791,6 +791,7 @@ footer .footerSesion p {
 
   .contactanos .contactar1 {
     text-align: center;
+    margin-bottom: 30px;
     padding: 20px;
     display: block;
   }
