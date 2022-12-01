@@ -1,0 +1,947 @@
+@import "https://fonts.google.com/specimen/Sura?query=sura";
+@import "https://fonts.google.com/specimen/M+PLUS+Rounded+1c?query=rounded+";
+* {
+  box-sizing: border- boss;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+body {
+  height: 100%;
+  background-color: #fdffea;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #76674ac5;
+  font-family: Sura;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: calc(.75em + 4vw);
+}
+
+h2 {
+  font-size: calc(.5em + 3.5vw);
+}
+
+h3 {
+  font-size: calc(1em + 3vw);
+}
+
+h4 {
+  font-size: calc(1em + 2.5vw);
+}
+
+h5 {
+  font-size: calc(1em + 1vw);
+}
+
+h6 {
+  font-size: calc(1em + 1.5vw);
+}
+
+#p-desktop {
+  color: #000000b0;
+  font-size: calc(1em + 1.25vw);
+  font-weight: bold;
+}
+
+p {
+  color: #000000b0;
+  font-size: calc(.6em + .5vw);
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  height: 130px;
+  background-color: #6b8f71;
+}
+
+header .logo {
+  width: 210px;
+  height: 130px;
+}
+
+header .header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+header .inicioSesion, header .headerbusqueda {
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 15px;
+  display: flex;
+}
+
+header .headerbusqueda .busqueda {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+header .headerbusqueda .busqueda img {
+  width: 32px;
+  height: 32px;
+}
+
+header .headerbusqueda input {
+  background-color: #0000;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+header .headerbusqueda input:focus {
+  outline: none;
+}
+
+header .headerbusqueda input::-moz-placeholder {
+  color: #f2f6d0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+header .headerbusqueda input:-ms-input-placeholder {
+  color: #f2f6d0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+header .headerbusqueda input::placeholder {
+  color: #f2f6d0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+header p {
+  color: #f2f6d0;
+  margin-right: 15px;
+  font-family: Sura;
+  font-size: 1.25em;
+}
+
+header a {
+  color: #f2f6d0;
+  font-family: Sura;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a :visited {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #6b8f71;
+  position: static;
+  bottom: 0;
+}
+
+footer a {
+  color: #f2f6d0;
+  font-family: Sura;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a :visited {
+  text-decoration: none;
+}
+
+footer .footer {
+  width: 100%;
+  height: 80px;
+  position: static;
+  bottom: 0;
+  left: 0;
+}
+
+footer .footer .redes {
+  display: absolute;
+  justify-items: flex-start;
+  margin: 20px 8px 20px 20px;
+}
+
+footer .footer p {
+  display: absolute;
+  float: right;
+  margin: 25px;
+  font-size: 1rem;
+}
+
+footer .footerSesion {
+  margin-top: 327px;
+  position: static;
+  bottom: 0;
+}
+
+footer .footerSesion .redes {
+  display: absolute;
+  justify-items: flex-start;
+  margin: 20px 8px 20px 20px;
+}
+
+footer .footerSesion p {
+  display: absolute;
+  float: right;
+  margin: 25px;
+  font-size: 1rem;
+}
+
+.btn-large-desktop {
+  width: 30%;
+  height: 50px;
+  color: #f2f6d0;
+  font-size: large;
+  font-weight: bold;
+}
+
+button {
+  width: 75px;
+  height: 40px;
+  background-color: #83c6be;
+  border: #83c6be;
+  border-radius: 40px;
+}
+
+button:hover {
+  color: #f2f6d0;
+  background-color: #37718e;
+}
+
+* {
+  box-sizing: border- boss;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+body {
+  height: 100%;
+  background-color: #fdffea;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #76674ac5;
+  font-family: Sura;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: calc(.75em + 4vw);
+}
+
+h2 {
+  font-size: calc(.5em + 3.5vw);
+}
+
+h3 {
+  font-size: calc(1em + 3vw);
+}
+
+h4 {
+  font-size: calc(1em + 2.5vw);
+}
+
+h5 {
+  font-size: calc(1em + 1vw);
+}
+
+h6 {
+  font-size: calc(1em + 1.5vw);
+}
+
+#p-desktop {
+  color: #000000b0;
+  font-size: calc(1em + 1.25vw);
+  font-weight: bold;
+}
+
+p {
+  color: #000000b0;
+  font-size: calc(.6em + .5vw);
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  height: 130px;
+  background-color: #6b8f71;
+}
+
+header .logo {
+  width: 210px;
+  height: 130px;
+}
+
+header .header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+header .inicioSesion, header .headerbusqueda {
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 15px;
+  display: flex;
+}
+
+header .headerbusqueda .busqueda {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+header .headerbusqueda .busqueda img {
+  width: 32px;
+  height: 32px;
+}
+
+header .headerbusqueda input {
+  background-color: #0000;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+header .headerbusqueda input:focus {
+  outline: none;
+}
+
+header .headerbusqueda input::-moz-placeholder {
+  color: #f2f6d0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+header .headerbusqueda input:-ms-input-placeholder {
+  color: #f2f6d0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+header .headerbusqueda input::placeholder {
+  color: #f2f6d0;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+header p {
+  color: #f2f6d0;
+  margin-right: 15px;
+  font-family: Sura;
+  font-size: 1.25em;
+}
+
+header a {
+  color: #f2f6d0;
+  font-family: Sura;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a :visited {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #6b8f71;
+  position: static;
+  bottom: 0;
+}
+
+footer a {
+  color: #f2f6d0;
+  font-family: Sura;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a :visited {
+  text-decoration: none;
+}
+
+footer .footer {
+  width: 100%;
+  height: 80px;
+  position: static;
+  bottom: 0;
+  left: 0;
+}
+
+footer .footer .redes {
+  display: absolute;
+  justify-items: flex-start;
+  margin: 20px 8px 20px 20px;
+}
+
+footer .footer p {
+  display: absolute;
+  float: right;
+  margin: 25px;
+  font-size: 1rem;
+}
+
+footer .footerSesion {
+  margin-top: 327px;
+  position: static;
+  bottom: 0;
+}
+
+footer .footerSesion .redes {
+  display: absolute;
+  justify-items: flex-start;
+  margin: 20px 8px 20px 20px;
+}
+
+footer .footerSesion p {
+  display: absolute;
+  float: right;
+  margin: 25px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .inicio {
+    min-width: 100%;
+    flex-flow: row;
+    display: flex;
+  }
+
+  .inicio .imagen2 {
+    width: 50%;
+    height: 87vh;
+    background-image: url("leafpattern.a0915d29.png");
+    background-repeat: repeat;
+    background-size: 20rem;
+  }
+
+  .inicio .imagen2 img {
+    width: 50%;
+    justify-content: center;
+    margin: 200px auto auto;
+    display: block;
+  }
+
+  .inicio .bienvenida {
+    width: 50%;
+    height: 87vh;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+
+  .inicio .bienvenida h1 {
+    margin-top: 70px;
+  }
+
+  .inicio .bienvenida p {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 24px;
+  }
+
+  .inicio .bienvenida button {
+    margin-bottom: 50px;
+  }
+
+  .inicio .bienvenida button :hover {
+    color: #f2f6d0;
+    background-color: #37718e;
+  }
+
+  .inicio .bienvenida button a {
+    color: #f2f6d0;
+    font-family: Sura;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .inicio .bienvenida button a :visited {
+    text-decoration: none;
+  }
+
+  .rrss {
+    width: 50%;
+    flex-flow: row;
+    justify-content: space-around;
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    right: 20px;
+  }
+
+  .rrss .redes {
+    width: 34px;
+    height: 34px;
+  }
+
+  .rrss .personajes {
+    width: 186px;
+    height: 285px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .inicio .imagen2 {
+    width: 100%;
+    height: 87vh;
+    background-image: url("leafpattern.a0915d29.png");
+    background-repeat: repeat;
+    background-size: 20rem;
+  }
+
+  .inicio .imagen2 img {
+    width: auto;
+    height: auto;
+  }
+
+  .inicio .bienvenida {
+    width: 50%;
+    height: 87vh;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+
+  .inicio .bienvenida h1 {
+    margin-top: 70px;
+  }
+
+  .inicio .bienvenida p {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 24px;
+  }
+
+  .inicio .bienvenida button {
+    margin-bottom: 50px;
+  }
+
+  .inicio .bienvenida button :hover {
+    color: #f2f6d0;
+    background-color: #37718e;
+  }
+
+  .inicio .bienvenida button a {
+    color: #f2f6d0;
+    font-family: Sura;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .inicio .bienvenida button a :visited {
+    text-decoration: none;
+  }
+
+  .rrss {
+    width: 50%;
+    flex-flow: row;
+    justify-content: space-around;
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    right: 20px;
+  }
+
+  .rrss .redes {
+    width: 34px;
+    height: 34px;
+  }
+
+  .rrss .personajes {
+    width: 186px;
+    height: 285px;
+  }
+}
+
+.formulario {
+  text-align: center;
+  width: 50%;
+  background-image: url("leafpattern.a0915d29.png");
+  background-repeat: repeat;
+  background-size: 10rem;
+  border-radius: 50px;
+  margin: 100px auto 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.formulario h2 {
+  color: #76674ac5;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+}
+
+.formulario input {
+  width: 50%;
+  height: 40px;
+  background-color: #f2f6d0;
+  border: none;
+  margin: 60px auto 40px;
+  display: block;
+}
+
+.formulario a {
+  color: #76674ac5;
+  margin-bottom: 10px;
+  font-size: calc(.7em + .3vw);
+  font-weight: bolder;
+  text-decoration: none;
+  top: 0;
+}
+
+.formulario ::-moz-placeholder {
+  color: #76674a7c;
+  font-size: calc(.5em + .5vw);
+  font-weight: 600;
+}
+
+.formulario :-ms-input-placeholder {
+  color: #76674a7c;
+  font-size: calc(.5em + .5vw);
+  font-weight: 600;
+}
+
+.formulario ::placeholder {
+  color: #76674a7c;
+  font-size: calc(.5em + .5vw);
+  font-weight: 600;
+}
+
+.formulario .enviar {
+  width: 200px;
+  color: #f2f6d0;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.imagenBienvenida img {
+  width: 327px;
+  height: 309px;
+  display: block;
+  position: fixed;
+  bottom: 47px;
+  right: 0;
+}
+
+.imagenRedonda {
+  width: 32px;
+  height: 32px;
+  border-radius: 150px;
+}
+
+@media screen and (min-width: 800px) {
+  .contactanos {
+    width: 100%;
+    height: 87vh;
+    display: flex;
+  }
+
+  .contactanos .contactar1 {
+    width: 50%;
+    height: 100%;
+    background-image: url("leafpattern.a0915d29.png");
+    background-repeat: repeat;
+    background-size: 20rem;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  .contactanos .contactar1 .cuadrado {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background: #83c6be;
+    border-radius: 30px 20px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .contactanos .contactar1 .cuadrado h2 {
+    color: #f2f6d0;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .contactanos .contactar1 h6 {
+    text-align: left;
+    color: #76674ac4;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .contactanos .contactar1 #mabel {
+    height: 40%;
+    width: auto;
+    position: relative;
+    bottom: 0;
+  }
+
+  .contactanos .contactar2 {
+    width: 50%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin-left: 80px;
+    padding-top: 10%;
+  }
+
+  .contactanos .contactar2 label {
+    color: #76674ac5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+  }
+
+  .contactanos .contactar2 input {
+    width: 60%;
+    height: 30px;
+    background-color: #f2f6d0;
+    border: none;
+    border-radius: 5px;
+    display: block;
+  }
+
+  .contactanos .contactar2 textarea {
+    width: 60%;
+    height: 200px;
+    background-color: #f2f6d0;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .contactanos .contactar2 button {
+    width: 150px;
+    color: #f2f6d0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .contactanos .contactar2 .redesSociales {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header input, header .favorito, header .busqueda {
+    display: none;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .contactanos {
+    width: 100%;
+    height: 87vh;
+    background-image: url("leafpattern.a0915d29.png");
+    background-repeat: repeat;
+    background-size: 40rem;
+  }
+
+  .contactanos .contactar1 {
+    text-align: center;
+    padding: 20px;
+    display: block;
+  }
+
+  .contactanos .contactar1 .cuadrado {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background: #83c6be;
+    border-radius: 30px 20px;
+    margin: 20px auto;
+    padding: 20px;
+    display: block;
+  }
+
+  .contactanos .contactar1 .cuadrado h2 {
+    color: #f2f6d0;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .contactanos .contactar1 img {
+    width: 179px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+  }
+
+  .contactanos .contactar2 label {
+    color: #76674ac5;
+    margin-top: 10px;
+    margin-left: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .contactanos .contactar2 input {
+    width: 60%;
+    height: 30px;
+    background-color: #f2f6d0;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20%;
+    display: block;
+  }
+
+  .contactanos .contactar2 textarea {
+    width: 60%;
+    height: 100px;
+    background-color: #f2f6d0;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-left: 20%;
+    display: block;
+  }
+
+  .contactanos .contactar2 button {
+    width: 40%;
+    color: #f2f6d0;
+    margin-left: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .contactanos .contactar2 .redesSociales {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+  }
+
+  .contactanos .contactar2 .redesSociales .redes {
+    margin: 10px;
+  }
+}
+
+.filtrado {
+  float: right;
+}
+
+.filtrado label {
+  color: #76674ac5;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.lista {
+  display: flex;
+}
+
+.lista .vecinos, .lista .peces {
+  width: 200px;
+  height: 170px;
+}
+
+.lista .musica {
+  width: 200px;
+  height: 200px;
+}
+
+.lista .col-0, .lista .col-1, .lista .col-2, .lista .col-3 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 7.5% 7.5%;
+  display: flex;
+}
+
+.lista .icono {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.lista .info {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.lista button {
+  width: 122px;
+  height: 44px;
+  color: #f2f6d0;
+  margin-bottom: 100px;
+  margin-left: 15%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.caracteristicas {
+  width: 80vw;
+  margin: 120px;
+  padding: auto;
+}
+
+.caracteristicas h5, .caracteristicas p {
+  width: 700px;
+  margin-bottom: 10px;
+}
+
+.caracteristicas img {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  float: right;
+}
+
+/*# sourceMappingURL=index.602ba444.css.map */

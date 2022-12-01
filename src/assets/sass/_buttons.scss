@@ -1,0 +1,23 @@
+@import './base';
+
+.btn-large-desktop{
+    width: 30%;
+    height: 50px;
+    color: $colorPrimario;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+button{
+    width: 75px;
+    height: 40px;
+    background-color: $colorBoton;
+    border: $colorBoton;
+    border-radius: 40px;
+}
+
+button:hover{
+    background-color: $colorHover;
+    color: $colorPrimario;
+}

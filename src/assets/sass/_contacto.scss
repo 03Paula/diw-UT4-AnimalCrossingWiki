@@ -1,0 +1,206 @@
+.imagenRedonda{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+}
+
+@media  screen and (min-width: 800px){
+    .contactanos{
+        width: 100%;
+        height: 87vh;
+        display: flex;
+        
+        
+        .contactar1{
+            background-image: url('../img/leafpattern.png');        
+            background-repeat:repeat;
+            background-size: 20rem;
+            
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content:space-between;
+    
+            .cuadrado{
+                width: max-content;
+                height: max-content;
+                background: #83C6BE;
+                border-radius: 30px 20px ;
+                margin-top: 20px;
+                padding: 20px;
+                h2{
+                    margin-top: 10px;
+                    color: $colorPrimario;
+                    text-transform: uppercase;
+                }
+            }
+    
+            h6{
+                margin-left: 50px;
+                margin-right: 50px;
+                text-align: left;
+                color: #76674ac4;
+            }
+            #mabel{
+                height: 40%;
+                width: auto;
+                position: relative;
+                bottom: 0px;
+            }
+        }
+    
+        .contactar2{
+            width: 50%;
+            height: max-content;
+            margin-left: 80px;
+            padding-top: 10%;
+            label{
+                
+                color: $colorletra;
+                font-size: 1.5rem;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+    
+            input{
+                width: 60%;
+                height: 30px;
+                background-color: $colorPrimario;
+                border-radius: 5px;
+                border: none;
+                display: block;
+    
+            }
+            textarea{
+                width: 60%;
+                height: 200px;
+                background-color: $colorPrimario;
+                border-radius: 5px;
+                border: none;
+                display: block;
+                margin-bottom: 30px;
+            }
+    
+            button{
+                display: inline-block;
+                width: 150px;
+                color: $colorPrimario;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+    
+            .redesSociales{
+                position: fixed;
+                bottom: 0;
+                right: 50px;
+            }
+        }
+        
+    }
+    
+}
+
+@media  screen and (max-width: 800px){
+
+    header{
+        input,.favorito,.busqueda{
+            display: none;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+
+    .contactanos{
+        width: 100%;
+        height: 87vh;
+        background-image: url('../img/leafpattern.png');
+        background-repeat: repeat;
+        background-size: 40rem;
+        .contactar1{
+            display: block;
+            text-align: center;
+            padding: 20px;
+
+            .cuadrado{
+                display: block;
+                width: max-content;
+                height: max-content;
+                background: #83C6BE;
+                border-radius: 30px 20px ;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 20px;
+                h2{
+                    margin-top: 10px;
+                    color: $colorPrimario;
+                    text-transform: uppercase;
+                }
+            }
+
+            img{
+                width: 179px;
+                height: auto;
+                position: absolute;
+                bottom: 0px;
+                right: 20px;
+            }
+
+        }
+
+        .contactar2{
+            label{
+                
+                color: $colorletra;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-left: 20%;
+            }
+    
+            input{
+                width: 60%;
+                height: 30px;
+                background-color: $colorPrimario;
+                border-radius: 5px;
+                border: none;
+                display: block;
+                margin-left: 20%;
+            }
+            textarea{
+                width: 60%;
+                height: 100px;
+                background-color: $colorPrimario;
+                border-radius: 5px;
+                border: none;
+                display: block;
+                margin-bottom: 30px;
+                margin-left: 20%;
+            }
+    
+            button{
+                
+                width: 40%;
+                color: $colorPrimario;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-left: 30%;
+            }
+
+            .redesSociales{
+                position: fixed;
+                bottom: 0;
+                left: 20px;
+                .redes{
+                    margin: 10px;
+                }
+            }
+        }
+        
+    }
+}
