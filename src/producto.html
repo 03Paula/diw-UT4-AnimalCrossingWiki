@@ -17,9 +17,9 @@
                         <input  id="busqueda" type="text" placeholder="buscar...">
                         <button class="busqueda"><img src="assets/img/Vector.png"></button>
                         <img src="assets/img/favorito.png">
-                        <p>Favoritos</p>
-                        <img src="assets/img/Resetti.png" class="imagenRedonda">
-                        <p>Usuario1</p>
+                        <p class="fav">Favoritos</p>
+                        <img src="assets/img/Resetti.png" class="imagenRedonda" onclick="location.href='usuario.html'">
+                        <p onclick="location.href='usuario.html'">Usuario1</p>
                         <button class="dia/noche"><img src="assets/img/sol.png"></button>
                     </section>
                 </section>
@@ -30,22 +30,72 @@
                 <section  class="carta">
                     <article class="informacion">
                         <aside class="visual">
-                            <img src="assets/img/miranda.png" alt="imagen de Miranda">
-                            <img src="assets/img/duck.png" alt="imagen del icono de la especie de los patos">
-                            <img src="assets/img/Fav.png" alt="imagen de un corazón">
+                            <img id="miranda" src="assets/img/miranda.png" alt="imagen de Miranda">
+                            <img id="pato-icono" src="assets/img/duck.png" alt="imagen del icono de la especie de los patos">
+                            <img id="fav-icono" src="assets/img/Fav.png" alt="imagen de un corazón">
                         </aside>
+        
+                        <aside class="informacion-1">
 
-                        <aside class="info">
                             <h1>Miranda</h1>
-                        </aside>
-                    </article>
-                </section>
+                            <section class="info">
+                                <article class="caracteristica-0">
+                                    <p class="titulo">Género</p>
+                                    <p>Femenino<img src="./assets/img/Femenino.png" id="genero"></p>
+                                </article>
+                                <article class="caracteristica-1">
+                                    <p class="titulo">Personalidad</p>
+                                    <p>Presumida</p>
+                                </article>
+                                <article class="caracteristica-2">
+                                    <p class="titulo">Especie</p>
+                                    <p>Patos</p>
+                                </article>
+                            </section>
+                            <section class="info-1">
+                                <article class="caracteristica-4">
+                                    <p class="titulo lema">Lema</p>
+                                    <p class="lema">"Que no te de miedo mojarte las patas."</p>
+                                </article>
+                            </section>
+    
+                            <section class="info-2">
+                                <article class="caracteristica-5">
+                                    <p class="titulo">Muletilla</p>
+                                    <p>Cua-cua</p>
+                                </article>
+                                <article class="caracteristica-6">
+                                    <p class="titulo">Cumpleaños</p>
+                                    <p>23 de Abril</p>
+                                </article>
+                                <article class="caracteristica-7">
+                                    <p class="titulo">Canción</p>
+                                    <p>Tota-sonata</p>
+                                </article>
+                            </section>
+
+                            <section class="info-3">
+                                <article class="caracteristica-8">
+                                    <p class="titulo">Atuendo</p>
+                                    <p>Top amatista</p>
+                                </article>
+                                <article class="caracteristica-9">
+                                    <p class="titulo">Signo</p>
+                                    <p>Tauro</p>
+                                </article>
+                                <article class="caracteristica-10">
+                                    <p class="titulo">Apariciones</p>
+                                    <p>DnMe +,Cf ,NL ,HHD ,NH</p>
+                                </article>
+                            </section>
+                        </section>
+                    </aside>
 
                 <section class="caracteristicas">
                     <img src="assets/img/Casa-Miranda.png" alt="casa de miranda">
                     <aside>
                         <h5>Apariencia: </h5>
-                        <p >Miranda tiene la piel de color rosa, fucsia en el cabello.El pico y las patas
+                        <p>Miranda tiene la piel de color rosa, fucsia en el cabello.El pico y las patas
                             son de color amarillo, algo anaranjado y tiene las mejillas de color rojo.
                         </p>
                         <h5>Personalidad: </h5>
@@ -70,10 +120,17 @@
                     </aside>
                     
                 </section>
-                <h5>Más vecinos de la misma especie: </h5>
-
-                <section class="scroll-horizontal"> 
-
+                
+                <section class="especie"> 
+                    <h5>Más vecinos de la misma especie: </h5>
+                    <article class="scroll">
+                        <img src="./assets/img/Flopi.png">
+                        <img src="./assets/img/Pati.png">
+                        <img src="./assets/img/Deira.png">
+                        <img src="./assets/img/Paticio.png">
+                        <img src="./assets/img/Mirta_NH 1.png">
+                    </article>
+                    <img id="volver" src="./assets/img/flecha.png" onclick="location.href='listado.html'">
                 </section>
             </main>
 

@@ -17,9 +17,9 @@
                         <input id="busqueda" type="text" placeholder="buscar...">
                         <button class="busqueda"><img src="/Vector.a90cf0f3.png"></button>
                         <img src="/favorito.4637be5a.png">
-                        <p>Favoritos</p>
-                        <img src="/Resetti.1f5ca774.png" class="imagenRedonda">
-                        <p>Usuario1</p>
+                        <p class="fav">Favoritos</p>
+                        <img src="/Resetti.1f5ca774.png" class="imagenRedonda" onclick="location.href='usuario.html'">
+                        <p onclick="location.href='usuario.html'">Usuario1</p>
                         <button class="dia/noche"><img src="/sol.8f3b848b.png"></button>
                     </section>
                 </section>
@@ -30,16 +30,66 @@
                 <section class="carta">
                     <article class="informacion">
                         <aside class="visual">
-                            <img src="/miranda.164034bd.png" alt="imagen de Miranda">
-                            <img src="/duck.74891b05.png" alt="imagen del icono de la especie de los patos">
-                            <img src="/Fav.d31eda6d.png" alt="imagen de un corazón">
+                            <img id="miranda" src="/miranda.164034bd.png" alt="imagen de Miranda">
+                            <img id="pato-icono" src="/duck.74891b05.png" alt="imagen del icono de la especie de los patos">
+                            <img id="fav-icono" src="/Fav.d31eda6d.png" alt="imagen de un corazón">
                         </aside>
+        
+                        <aside class="informacion-1">
 
-                        <aside class="info">
                             <h1>Miranda</h1>
-                        </aside>
-                    </article>
-                </section>
+                            <section class="info">
+                                <article class="caracteristica-0">
+                                    <p class="titulo">Género</p>
+                                    <p>Femenino<img src="/Femenino.bfef96e1.png" id="genero"></p>
+                                </article>
+                                <article class="caracteristica-1">
+                                    <p class="titulo">Personalidad</p>
+                                    <p>Presumida</p>
+                                </article>
+                                <article class="caracteristica-2">
+                                    <p class="titulo">Especie</p>
+                                    <p>Patos</p>
+                                </article>
+                            </section>
+                            <section class="info-1">
+                                <article class="caracteristica-4">
+                                    <p class="titulo lema">Lema</p>
+                                    <p class="lema">"Que no te de miedo mojarte las patas."</p>
+                                </article>
+                            </section>
+    
+                            <section class="info-2">
+                                <article class="caracteristica-5">
+                                    <p class="titulo">Muletilla</p>
+                                    <p>Cua-cua</p>
+                                </article>
+                                <article class="caracteristica-6">
+                                    <p class="titulo">Cumpleaños</p>
+                                    <p>23 de Abril</p>
+                                </article>
+                                <article class="caracteristica-7">
+                                    <p class="titulo">Canción</p>
+                                    <p>Tota-sonata</p>
+                                </article>
+                            </section>
+
+                            <section class="info-3">
+                                <article class="caracteristica-8">
+                                    <p class="titulo">Atuendo</p>
+                                    <p>Top amatista</p>
+                                </article>
+                                <article class="caracteristica-9">
+                                    <p class="titulo">Signo</p>
+                                    <p>Tauro</p>
+                                </article>
+                                <article class="caracteristica-10">
+                                    <p class="titulo">Apariciones</p>
+                                    <p>DnMe +,Cf ,NL ,HHD ,NH</p>
+                                </article>
+                            </section>
+                        </aside></article></section>
+                    
 
                 <section class="caracteristicas">
                     <img src="/Casa-Miranda.32ea7f3b.png" alt="casa de miranda">
@@ -70,10 +120,17 @@
                     </aside>
                     
                 </section>
-                <h5>Más vecinos de la misma especie: </h5>
-
-                <section class="scroll-horizontal"> 
-
+                
+                <section class="especie"> 
+                    <h5>Más vecinos de la misma especie: </h5>
+                    <article class="scroll">
+                        <img src="/Flopi.485091de.png">
+                        <img src="/Pati.367d1296.png">
+                        <img src="/Deira.ff2f5a93.png">
+                        <img src="/Paticio.e285641f.png">
+                        <img src="/Mirta_NH%201.8ab273bd.png">
+                    </article>
+                    <img id="volver" src="/flecha.8c2b5f36.png" onclick="location.href='listado.html'">
                 </section>
             </main>
 
