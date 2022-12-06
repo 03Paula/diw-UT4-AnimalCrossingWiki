@@ -171,7 +171,6 @@ footer{
     width: 100%;
     height: 80px;
 
-
     a{
         text-decoration: none;
         color: $colorPrimario;
@@ -225,4 +224,10 @@ footer{
        }
     }
 
+}
+
+.footerOceano{
+    background-color: $colorFondo;
+    background-image: url('../img/footerOceano.png');
+    background-repeat: repeat-x;
 }

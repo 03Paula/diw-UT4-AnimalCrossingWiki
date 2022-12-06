@@ -23,19 +23,18 @@
             align-items: center;
             justify-content:space-between;
     
-            .cuadrado{
-                width: max-content;
-                height: max-content;
-                background: #83C6BE;
-                border-radius: 30px 20px ;
-                margin-top: 20px;
-                padding: 20px;
+        
                 h2{
                     margin-top: 10px;
                     color: $colorPrimario;
+                    background-color: $colorBoton;
+                    margin-top: 40px;
+                    padding: 20px;
                     text-transform: uppercase;
+                    -webkit-border-radius: 75px 0px 0 0;
+                    border-radius: 70px 70px 100 100;
                 }
-            }
+            
     
             h6{
                 margin-left: 50px;
@@ -127,22 +126,19 @@
             padding: 20px;
             margin-bottom: 30px;
 
-            .cuadrado{
-                display: block;
-                width: max-content;
-                height: max-content;
-                background: #83C6BE;
-                border-radius: 30px 20px ;
-                margin: auto;
+            
+            h2{
+                margin-top: 10px;
+                color: $colorPrimario;
+                background-color: $colorBoton;
                 margin-top: 20px;
                 margin-bottom: 20px;
                 padding: 20px;
-                h2{
-                    margin-top: 10px;
-                    color: $colorPrimario;
-                    text-transform: uppercase;
-                }
+                text-transform: uppercase;
+                -webkit-border-radius: 75px 0px 0 0;
+                border-radius: 70px 70px 100 100;
             }
+            
 
             img{
                 width: 179px;

@@ -13,6 +13,7 @@
     }
 }
 
+
 .lista{
     display: flex;
     
@@ -20,7 +21,6 @@
         width: 200px;
         height:170px;
     }
-
     .peces {
         width: 200px;
         height: 170px;
@@ -32,7 +32,6 @@
     }
 
     .col-0, .col-1 , .col-2 , .col-3{
-        display: flex;
         flex-direction: column;
         justify-content:space-around;
         align-items: center;

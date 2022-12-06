@@ -3,6 +3,7 @@
         display:flex;
         flex-flow: row;
         min-width: 100%;
+        height: auto;
         
     
         .imagen2{
@@ -29,7 +30,7 @@
             align-items: center;
             justify-content:space-around;
             width: 50%;
-            height: 87vh;
+            height: 80vh;
             
     
             h1{
@@ -74,8 +75,8 @@
     
     
         .personajes{
-            width: 186px;
-            height: 285px;
+            width: 22%;
+            height: auto;
         }
     }
     
