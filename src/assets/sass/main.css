@@ -928,42 +928,189 @@ button:hover {
   cursor: pointer;
 }
 
-.logo {
-  width: 210px;
-  height: auto;
-  margin: 20px;
+@media screen and (min-width: 700px) {
+  .logotipo img {
+    width: 210;
+    height: auto;
+    margin: 10px;
+  }
+  .error img {
+    width: 250px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    display: block;
+    margin: auto;
+  }
+  .error .dialogo {
+    width: 90vw;
+    height: 300px;
+    position: absolute;
+    top: 640px;
+  }
+  .error .dialogo h5 {
+    width: 50%;
+    height: 40px;
+    padding: 60px;
+    background-color: #F2F6D0;
+    border-radius: 70px;
+    display: block;
+    margin: auto;
+    margin-left: 20%;
+    text-align: center;
+  }
+  .error .dialogo p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    text-align: center;
+  }
+  .error .dialogo #respuesta {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: rgb(238, 237, 174);
+    padding: 20px;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 280px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .error .puntero {
+    width: 30px;
+    display: block;
+    position: absolute;
+    left: 62%;
+    top: 600px;
+    -webkit-transform: rotate(90deg);
+    -webkit-animation: slide 1s linear infinite;
+            animation: slide 1s linear infinite;
+  }
+  @-webkit-keyframes slide {
+    from {
+      left: 61.5%;
+    }
+    to {
+      left: 62%;
+    }
+  }
+  @keyframes slide {
+    from {
+      left: 61.5%;
+    }
+    to {
+      left: 62%;
+    }
+  }
+  #nombrePersonaje {
+    width: 200px;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 23%;
+    top: 600px;
+    background-color: rgb(184, 158, 112);
+    border-radius: 50px;
+    text-align: center;
+    -webkit-transform: rotate(-5deg);
+  }
 }
-
-.error {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.error img {
-  width: 250px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.error .dialogo {
-  display: block;
-  position: relative;
-  top: 200px;
-}
-.error .dialogo img {
-  width: 600px;
-  margin: auto;
-}
-.error .dialogo h5, .error .dialogo p {
-  position: absolute;
-  top: 41%;
-  left: 75px;
-}
-.error .dialogo p {
-  top: 50%;
-  left: 250px;
-}
-.error .dialogo h6 {
-  background-color: rgb(238, 237, 174);
+@media screen and (max-width: 700px) {
+  .logotipo img {
+    width: 210;
+    height: auto;
+    margin: 10px;
+  }
+  .error img {
+    width: 250px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    display: block;
+    margin: auto;
+  }
+  .error .dialogo {
+    width: 90vw;
+    height: 300px;
+    position: absolute;
+    top: 640px;
+  }
+  .error .dialogo h5 {
+    width: 50%;
+    height: 40px;
+    padding: 65px;
+    background-color: #F2F6D0;
+    border-radius: 70px;
+    display: block;
+    margin: auto;
+    margin-left: 15%;
+    text-align: center;
+  }
+  .error .dialogo p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    top: 140px;
+    text-align: center;
+  }
+  .error .dialogo #respuesta {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: rgb(238, 237, 174);
+    padding: 10px;
+    border-radius: 50px;
+    position: absolute;
+    left: 45%;
+    bottom: 280px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .error .puntero {
+    width: 30px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 610px;
+    -webkit-transform: rotate(90deg);
+    -webkit-animation: slide 1s linear infinite;
+            animation: slide 1s linear infinite;
+  }
+  @-webkit-keyframes slide {
+    from {
+      left: 49.5%;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  @keyframes slide {
+    from {
+      left: 49.5%;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  #nombrePersonaje {
+    width: 120px;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 15%;
+    top: 630px;
+    background-color: rgb(184, 158, 112);
+    border-radius: 50px;
+    text-align: center;
+    -webkit-transform: rotate(-7deg);
+  }
 }/*# sourceMappingURL=main.css.map */

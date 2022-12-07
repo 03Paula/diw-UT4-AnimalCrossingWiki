@@ -4,16 +4,21 @@
         <link href="assets/sass/main.css" rel="stylesheet" type="text/css">
     </head>
     <main>
-        <img src="./assets/img/logo.webp" alt="logo del animal crossing New Horizons" class="logo">
+        <section class="logotipo">
+            <img src="./assets/img/logo.webp" alt="logo del animal crossing New Horizons">
+        </section>
+        
         <section class="error">
             <img src="./assets/img/Tom_Nook.webp" alt="Imagen de Tom Nook" />
             <article class="dialogo">
-                <img src="./assets/img/Bocadillo.png" alt="Imagen del dialogo" />
                 <h5>Parece que te has quedado sin bayas...</h5>
-                <p>Error 404</p>
-                <h6>Volver a la página</h6>
+                <p id="error">Error 404</p>
+                <h5 id="respuesta" onclick="location.href='listado.html'">Volver a la página</h5>
             </article>
-
+            <div id="nombrePersonaje">
+                <p class="p-desktop">Tom Nook</p>
+            </div>
+            <img src="./assets/img/mano.png" class="puntero">
         </section>
     </main>
 </html>
