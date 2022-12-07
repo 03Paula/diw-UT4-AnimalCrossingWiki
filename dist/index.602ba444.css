@@ -151,12 +151,22 @@ header a :visited {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  header .fav {
+    display: none;
+  }
+
+  header .corazon {
+    margin-right: 10px;
+  }
+}
+
 footer {
   width: 100%;
   height: 80px;
   background-color: #6b8f71;
   position: static;
-  bottom: 0;
+  bottom: 0%;
 }
 
 footer a {
@@ -169,14 +179,6 @@ footer a {
 
 footer a :visited {
   text-decoration: none;
-}
-
-footer .footer {
-  width: 100%;
-  height: 80px;
-  position: static;
-  bottom: 0;
-  left: 0;
 }
 
 footer .footer .redes {
@@ -217,6 +219,35 @@ footer .footerSesion p {
   background-repeat: repeat-x;
 }
 
+.btn-large-desktop {
+  width: 30%;
+  height: 50px;
+  color: #f2f6d0;
+  font-size: large;
+  font-weight: bold;
+}
+
+.btn-medium-desktop {
+  width: 170px;
+  height: 50px;
+  color: #f2f6d0;
+  font-size: large;
+  font-weight: 800px;
+}
+
+button {
+  width: 75px;
+  height: 40px;
+  background-color: #83c6be;
+  border: #83c6be;
+  border-radius: 40px;
+}
+
+button:hover {
+  color: #f2f6d0;
+  background-color: #37718e;
+}
+
 @media screen and (min-width: 900px) {
   .inicio {
     min-width: 100%;
@@ -236,7 +267,7 @@ footer .footerSesion p {
   .inicio .imagen2 img {
     width: 50%;
     justify-content: center;
-    margin: 200px auto auto;
+    margin: 220px auto auto;
     display: block;
   }
 
@@ -317,7 +348,7 @@ footer .footerSesion p {
     width: 350px;
     height: auto;
     margin: auto;
-    padding: 10%;
+    padding-top: 10%;
     display: block;
   }
 
@@ -341,7 +372,7 @@ footer .footerSesion p {
     align-items: center;
     display: inline-block;
     position: absolute;
-    bottom: 335px;
+    bottom: 33.8%;
     left: 30%;
   }
 
@@ -369,21 +400,21 @@ footer .footerSesion p {
 .formulario {
   text-align: center;
   width: 50%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   background-image: url("leafpattern.a0915d29.png");
   background-repeat: repeat;
   background-size: 10rem;
   border-radius: 50px;
-  margin: 100px auto 200px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin: 87px auto 100px;
+  padding: 20px;
 }
 
 .formulario h2 {
   color: #76674ac5;
-  position: absolute;
-  top: 200px;
-  left: 0;
-  right: 0;
+  margin: auto;
+  display: block;
 }
 
 .formulario input {
@@ -433,7 +464,6 @@ footer .footerSesion p {
 .imagenBienvenida img {
   width: 327px;
   height: 309px;
-  display: block;
   position: fixed;
   bottom: 47px;
   right: 0;
@@ -454,7 +484,7 @@ footer .footerSesion p {
 
   .contactanos .contactar1 {
     width: 50%;
-    height: 100%;
+    height: 87vh;
     background-image: url("leafpattern.a0915d29.png");
     background-repeat: repeat;
     background-size: 20rem;
@@ -481,7 +511,7 @@ footer .footerSesion p {
   }
 
   .contactanos .contactar1 #mabel {
-    height: 40%;
+    height: 30vh;
     width: auto;
     position: relative;
     bottom: 0;
@@ -489,9 +519,6 @@ footer .footerSesion p {
 
   .contactanos .contactar2 {
     width: 50%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
     margin-left: 80px;
     padding-top: 10%;
   }
@@ -814,10 +841,6 @@ footer .footerSesion p {
 }
 
 @media screen and (max-width: 1075px) {
-  header .fav {
-    display: none;
-  }
-
   .carta {
     width: 74vw;
     height: 860px;
@@ -1005,33 +1028,51 @@ footer .footerSesion p {
   margin: 20px;
 }
 
-.btn-large-desktop {
-  width: 30%;
-  height: 50px;
-  color: #f2f6d0;
-  font-size: large;
-  font-weight: bold;
+.logo {
+  width: 210px;
+  height: auto;
+  margin: 20px;
 }
 
-.btn-medium-desktop {
-  width: 170px;
-  height: 50px;
-  color: #f2f6d0;
-  font-size: large;
-  font-weight: 800px;
+.error {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
 }
 
-button {
-  width: 75px;
-  height: 40px;
-  background-color: #83c6be;
-  border: #83c6be;
-  border-radius: 40px;
+.error img {
+  width: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-button:hover {
-  color: #f2f6d0;
-  background-color: #37718e;
+.error .dialogo {
+  display: block;
+  position: relative;
+  top: 200px;
+}
+
+.error .dialogo img {
+  width: 600px;
+  margin: auto;
+}
+
+.error .dialogo h5, .error .dialogo p {
+  position: absolute;
+  top: 41%;
+  left: 75px;
+}
+
+.error .dialogo p {
+  top: 50%;
+  left: 250px;
+}
+
+.error .dialogo h6 {
+  background-color: #eeedae;
 }
 
 /*# sourceMappingURL=index.602ba444.css.map */

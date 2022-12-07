@@ -145,10 +145,18 @@ header a :visited {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  header .fav {
+    display: none;
+  }
+  header .corazon {
+    margin-right: 10px;
+  }
+}
 footer {
   background-color: #6B8F71;
   position: static;
-  bottom: 0;
+  bottom: 0%;
   width: 100%;
   height: 80px;
 }
@@ -162,13 +170,6 @@ footer a {
 }
 footer a :visited {
   text-decoration: none;
-}
-footer .footer {
-  position: static;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 80px;
 }
 footer .footer .redes {
   display: absolute;
@@ -206,6 +207,35 @@ footer .footerSesion p {
   background-repeat: repeat-x;
 }
 
+.btn-large-desktop {
+  width: 30%;
+  height: 50px;
+  color: #F2F6D0;
+  font-size: large;
+  font-weight: bold;
+}
+
+.btn-medium-desktop {
+  width: 170px;
+  height: 50px;
+  color: #F2F6D0;
+  font-size: large;
+  font-weight: 800px;
+}
+
+button {
+  width: 75px;
+  height: 40px;
+  background-color: #83C6BE;
+  border: #83C6BE;
+  border-radius: 40px;
+}
+
+button:hover {
+  background-color: #37718E;
+  color: #F2F6D0;
+}
+
 @media screen and (min-width: 900px) {
   .inicio {
     display: flex;
@@ -224,7 +254,7 @@ footer .footerSesion p {
     width: 50%;
     display: block;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 220px;
     justify-content: center;
   }
   .inicio .bienvenida {
@@ -294,7 +324,7 @@ footer .footerSesion p {
     height: auto;
     display: block;
     margin: auto;
-    padding: 10%;
+    padding-top: 10%;
   }
   .inicio .bienvenida {
     display: inline;
@@ -313,7 +343,7 @@ footer .footerSesion p {
   .inicio .bienvenida .redesSociales {
     display: inline-block;
     position: absolute;
-    bottom: 335px;
+    bottom: 33.8%;
     left: 30%;
     align-items: center;
   }
@@ -340,18 +370,18 @@ footer .footerSesion p {
   background-size: 10rem;
   text-align: center;
   width: 50%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 50px;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 200px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 87px;
+  margin-bottom: 100px;
+  padding: 20px;
 }
 .formulario h2 {
-  position: absolute;
-  top: 200;
-  left: 0;
-  right: 0;
+  display: block;
+  margin: auto;
   color: rgba(118, 103, 74, 0.7725490196);
 }
 .formulario input {
@@ -398,7 +428,6 @@ footer .footerSesion p {
 .imagenBienvenida img {
   width: 327px;
   height: 309px;
-  display: block;
   position: fixed;
   bottom: 47px;
   right: 0;
@@ -421,7 +450,7 @@ footer .footerSesion p {
     background-repeat: repeat;
     background-size: 20rem;
     width: 50%;
-    height: 100%;
+    height: 87vh;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -443,16 +472,13 @@ footer .footerSesion p {
     color: rgba(118, 103, 74, 0.7725490196);
   }
   .contactanos .contactar1 #mabel {
-    height: 40%;
+    height: 30vh;
     width: auto;
     position: relative;
     bottom: 0px;
   }
   .contactanos .contactar2 {
     width: 50%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
     margin-left: 80px;
     padding-top: 10%;
   }
@@ -581,6 +607,7 @@ footer .footerSesion p {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .lista {
   display: flex;
 }
@@ -736,9 +763,6 @@ footer .footerSesion p {
   }
 }
 @media screen and (max-width: 1075px) {
-  header .fav {
-    display: none;
-  }
   .carta {
     width: 74vw;
     height: 860px;
@@ -904,31 +928,42 @@ footer .footerSesion p {
   cursor: pointer;
 }
 
-.btn-large-desktop {
-  width: 30%;
-  height: 50px;
-  color: #F2F6D0;
-  font-size: large;
-  font-weight: bold;
+.logo {
+  width: 210px;
+  height: auto;
+  margin: 20px;
 }
 
-.btn-medium-desktop {
-  width: 170px;
-  height: 50px;
-  color: #F2F6D0;
-  font-size: large;
-  font-weight: 800px;
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
-button {
-  width: 75px;
-  height: 40px;
-  background-color: #83C6BE;
-  border: #83C6BE;
-  border-radius: 40px;
+.error img {
+  width: 250px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-
-button:hover {
-  background-color: #37718E;
-  color: #F2F6D0;
+.error .dialogo {
+  display: block;
+  position: relative;
+  top: 200px;
+}
+.error .dialogo img {
+  width: 600px;
+  margin: auto;
+}
+.error .dialogo h5, .error .dialogo p {
+  position: absolute;
+  top: 41%;
+  left: 75px;
+}
+.error .dialogo p {
+  top: 50%;
+  left: 250px;
+}
+.error .dialogo h6 {
+  background-color: rgb(238, 237, 174);
 }/*# sourceMappingURL=main.css.map */

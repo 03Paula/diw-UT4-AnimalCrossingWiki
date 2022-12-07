@@ -1,0 +1,1 @@
+{"mappings":"AAAA,SAAS,cAAa;IAClB,IAAI,YAAY,SAAS,IAAI;IAC7B,UAAU,SAAS,CAAC,MAAM,CAAC;AAC/B","sources":["src/main.js"],"sourcesContent":["function cambiarTema(){\r\n    var cuerpoweb = document.body;\r\n    cuerpoweb.classList.toggle('oscuro')\r\n}"],"names":[],"version":3,"file":"index.de158e3a.js.map","sourceRoot":"/__parcel_source_root/"}

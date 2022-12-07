@@ -1,13 +1,16 @@
 @import url('https://fonts.google.com/specimen/Sura?query=sura');
 @import url('https://fonts.google.com/specimen/M+PLUS+Rounded+1c?query=rounded+');
 @import './bases';
+@import './layout';
+@import '../sass/components/buttons';
 @import './inicio';
 @import './sesion';
 @import './contacto';
 @import './listado';
 @import './producto';
 @import './usuario';
-@import '../sass/components/buttons';
+@import './404';
+
 
 //*********************************//
 
