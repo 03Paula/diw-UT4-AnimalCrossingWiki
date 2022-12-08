@@ -7,12 +7,12 @@
         
     
         .imagen2{
-            background-image: url('../img/leafpattern.png');
+            background-image: var(--fondo-hojas);
             background-repeat: repeat;
             background-size: 20rem;
     
             width: 50%;
-            height: 87vh;
+            height: 90vh;
             
         
         img{
@@ -96,7 +96,7 @@
     }
     .inicio{
         .imagen2{
-            background-image: url('../img/leafpattern.png');
+            background-image: var(--fondo-hojas);
             background-repeat: repeat;
             background-size: 40rem;
     
@@ -105,11 +105,11 @@
             
         
             img{
-                width: 350px;
+                width: 300px;
                 height: auto;
                 display: block;
                 margin: auto;
-                padding-top: 10%;
+                padding-top: 55px;
             }
         }
 
@@ -132,7 +132,7 @@
             .redesSociales{
                 display:inline-block;
                 position: absolute;
-                bottom: 33.8%;
+                bottom: 35.5%;
                 left: 30%;
                 
                 align-items: center;
@@ -150,11 +150,10 @@
                 display: none;
             }
             .personajes{
-                width: 100px;
+                width: 8vh;
                 height: auto;
-                position: absolute;
-                top:83%;
-                right: 20px;
+                position: static;
+                
             }
         
         }

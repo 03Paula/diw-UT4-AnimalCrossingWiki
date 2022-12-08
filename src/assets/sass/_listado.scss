@@ -2,7 +2,7 @@
     float: right;
     
     label{
-        color: $colorletra;
+        color: var(--color-letra);
         font-size: 1.5rem;
         font-weight: bold;
 
@@ -53,7 +53,7 @@
         height: 44px;
         font-size: 1.5rem;
         font-weight: bold;
-        color: $colorPrimario;
+        color: var(--color-primario);
         margin-bottom: 100px;
     }
 

@@ -13,13 +13,13 @@ html {
 }
 
 body {
-  background-color: #FDFFEA;
+  background-color: var(--color-fondo);
   height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Sura";
-  color: rgba(118, 103, 74, 0.7725490196);
+  color: var(--color-letra);
   font-weight: bold;
 }
 
@@ -50,23 +50,23 @@ h6 {
 .p-desktop {
   font-size: calc(1em + 1.25vw);
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.5568627451);
+  color: var(--color-letra-p);
 }
 
 p {
   font-size: 16px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.5568627451);
+  color: var(--color-letra-p);
 }
 
 header {
-  background-color: #6B8F71;
+  background-color: var(--color-secundario);
   width: 100%;
-  height: 130px;
+  height: 100px;
 }
 header .logo {
-  width: 210px;
-  height: 130px;
+  width: 150px;
+  height: auto;
 }
 header .header {
   display: flex;
@@ -101,24 +101,24 @@ header .headerbusqueda input {
   padding: 10px;
   border-radius: 20px;
   background-color: transparent;
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-weight: 800;
 }
 header .headerbusqueda input:focus {
   outline: none;
 }
 header .headerbusqueda input::-moz-placeholder {
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-size: 16px;
   font-weight: bolder;
 }
 header .headerbusqueda input:-ms-input-placeholder {
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-size: 16px;
   font-weight: bolder;
 }
 header .headerbusqueda input::placeholder {
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-size: 16px;
   font-weight: bolder;
 }
@@ -135,7 +135,7 @@ header p {
 }
 header a {
   text-decoration: none;
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-family: "Sura";
   font-size: large;
   font-size: 1.5em;
@@ -154,15 +154,15 @@ header a :visited {
   }
 }
 footer {
-  background-color: #6B8F71;
+  background-color: var(--color-secundario);
   position: static;
-  bottom: 0%;
+  bottom: 0vh;
   width: 100%;
   height: 80px;
 }
 footer a {
   text-decoration: none;
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-family: "Sura";
   font-size: large;
   font-size: 1.5em;
@@ -186,7 +186,7 @@ footer .footer p {
 footer .footerSesion {
   margin-top: 327px;
   position: static;
-  bottom: 0px;
+  bottom: 0vh;
 }
 footer .footerSesion .redes {
   display: absolute;
@@ -202,15 +202,43 @@ footer .footerSesion p {
 }
 
 .footerOceano {
-  background-color: #FDFFEA;
+  background-color: var(--color-fondo);
   background-image: url("../img/footerOceano.png");
   background-repeat: repeat-x;
+}
+
+[tema=dia] {
+  --color-primario: #F2F6D0;
+  --color-secundario: #6B8F71;
+  --color-fondo: #FDFFEA;
+  --color-boton: #83C6BE;
+  --color-hover: #37718E;
+  --color-input: #F2F6D0;
+  --color-letra: rgba(118, 103, 74, 0.7725490196);
+  --color-letra-input: rgba(118, 103, 74, 0.4862745098);
+  --color-letra-p: rgba(0, 0, 0, 0.5568627451);
+  --fondo-hojas: url(/src/assets/img/leafpattern.png);
+  --fondo-usuario: url(/src/assets/img/leafpattern2.png);
+}
+
+[tema=noche] {
+  --color-primario: #F2F6D0;
+  --color-secundario: #3E5542;
+  --color-fondo: #201F1F;
+  --color-boton: #6AA49D;
+  --color-hover: #245066;
+  --color-input: #b0b395;
+  --color-letra: #F2F6D0;
+  --color-letra-input: rgba(118, 103, 74, 0.4862745098);
+  --color-letra-p: #F2F6D0;
+  --fondo-hojas: url(/src/assets/img/leafpatternosc.png);
+  --fondo-usuario: url(/src/assets/img/leafpattern2osc.png);
 }
 
 .btn-large-desktop {
   width: 30%;
   height: 50px;
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-size: large;
   font-weight: bold;
 }
@@ -218,7 +246,7 @@ footer .footerSesion p {
 .btn-medium-desktop {
   width: 170px;
   height: 50px;
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-size: large;
   font-weight: 800px;
 }
@@ -226,14 +254,14 @@ footer .footerSesion p {
 button {
   width: 75px;
   height: 40px;
-  background-color: #83C6BE;
-  border: #83C6BE;
+  background-color: var(--color-boton);
+  border: var(--color-boton);
   border-radius: 40px;
 }
 
 button:hover {
-  background-color: #37718E;
-  color: #F2F6D0;
+  background-color: var(--color-hover);
+  color: var(--color-primario);
 }
 
 @media screen and (min-width: 900px) {
@@ -244,11 +272,11 @@ button:hover {
     height: auto;
   }
   .inicio .imagen2 {
-    background-image: url("../img/leafpattern.png");
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 20rem;
     width: 50%;
-    height: 87vh;
+    height: 90vh;
   }
   .inicio .imagen2 img {
     width: 50%;
@@ -313,18 +341,18 @@ button:hover {
     border-radius: 50%;
   }
   .inicio .imagen2 {
-    background-image: url("../img/leafpattern.png");
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 40rem;
     width: 100%;
     height: 50vh;
   }
   .inicio .imagen2 img {
-    width: 350px;
+    width: 300px;
     height: auto;
     display: block;
     margin: auto;
-    padding-top: 10%;
+    padding-top: 55px;
   }
   .inicio .bienvenida {
     display: inline;
@@ -343,7 +371,7 @@ button:hover {
   .inicio .bienvenida .redesSociales {
     display: inline-block;
     position: absolute;
-    bottom: 33.8%;
+    bottom: 35.5%;
     left: 30%;
     align-items: center;
   }
@@ -357,15 +385,13 @@ button:hover {
     display: none;
   }
   .inicio .personaje .personajes {
-    width: 100px;
+    width: 8vh;
     height: auto;
-    position: absolute;
-    top: 83%;
-    right: 20px;
+    position: static;
   }
 }
 .formulario {
-  background-image: url("../img/leafpattern.png");
+  background-image: var(--fondo-hojas);
   background-repeat: repeat;
   background-size: 10rem;
   text-align: center;
@@ -382,20 +408,21 @@ button:hover {
 .formulario h2 {
   display: block;
   margin: auto;
-  color: rgba(118, 103, 74, 0.7725490196);
+  color: var(--color-letra);
 }
 .formulario input {
   width: 50%;
   height: 40px;
-  background-color: #F2F6D0;
+  background-color: var(--color-input);
   border: none;
   display: block;
   margin: auto;
   margin-top: 60px;
   margin-bottom: 40px;
+  border-radius: 10px;
 }
 .formulario a {
-  color: rgba(118, 103, 74, 0.7725490196);
+  color: var(--color-letra);
   text-decoration: none;
   font-size: calc(0.7em + 0.3vw);
   font-weight: bolder;
@@ -403,24 +430,24 @@ button:hover {
   margin-bottom: 10px;
 }
 .formulario ::-moz-placeholder {
-  color: rgba(118, 103, 74, 0.4862745098);
+  color: var(--color-letra-input);
   font-weight: 600;
   font-size: calc(0.5em + 0.5vw);
 }
 .formulario :-ms-input-placeholder {
-  color: rgba(118, 103, 74, 0.4862745098);
+  color: var(--color-letra-input);
   font-weight: 600;
   font-size: calc(0.5em + 0.5vw);
 }
 .formulario ::placeholder {
-  color: rgba(118, 103, 74, 0.4862745098);
+  color: var(--color-letra-input);
   font-weight: 600;
   font-size: calc(0.5em + 0.5vw);
 }
 .formulario .enviar {
   width: 200px;
   margin-bottom: 20px;
-  color: #F2F6D0;
+  color: var(--color-primario);
   font-weight: 600;
   font-size: 1rem;
 }
@@ -446,11 +473,11 @@ button:hover {
     display: flex;
   }
   .contactanos .contactar1 {
-    background-image: url("../img/leafpattern.png");
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 20rem;
     width: 50%;
-    height: 87vh;
+    height: 90vh;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -458,8 +485,8 @@ button:hover {
   }
   .contactanos .contactar1 h2 {
     margin-top: 10px;
-    color: #F2F6D0;
-    background-color: #83C6BE;
+    color: var(--color-primario);
+    background-color: var(--color-boton);
     margin-top: 40px;
     padding: 20px;
     text-transform: uppercase;
@@ -469,7 +496,7 @@ button:hover {
     margin-left: 50px;
     margin-right: 50px;
     text-align: left;
-    color: rgba(118, 103, 74, 0.7725490196);
+    color: var(--color-letra);
   }
   .contactanos .contactar1 #mabel {
     height: 30vh;
@@ -483,7 +510,7 @@ button:hover {
     padding-top: 10%;
   }
   .contactanos .contactar2 label {
-    color: rgba(118, 103, 74, 0.7725490196);
+    color: var(--color-letra);
     font-size: 1.5rem;
     font-weight: bold;
     display: block;
@@ -493,7 +520,7 @@ button:hover {
   .contactanos .contactar2 input {
     width: 60%;
     height: 30px;
-    background-color: #F2F6D0;
+    background-color: var(--color-input);
     border-radius: 5px;
     border: none;
     display: block;
@@ -501,7 +528,7 @@ button:hover {
   .contactanos .contactar2 textarea {
     width: 60%;
     height: 200px;
-    background-color: #F2F6D0;
+    background-color: var(--color-input);
     border-radius: 5px;
     border: none;
     display: block;
@@ -510,7 +537,7 @@ button:hover {
   .contactanos .contactar2 button {
     display: inline-block;
     width: 150px;
-    color: #F2F6D0;
+    color: var(--color-primario);
     font-size: 1.5rem;
     font-weight: bold;
   }
@@ -529,8 +556,8 @@ button:hover {
   }
   .contactanos {
     width: 100%;
-    height: 87vh;
-    background-image: url("../img/leafpattern.png");
+    height: 90vh;
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 40rem;
   }
@@ -542,8 +569,8 @@ button:hover {
   }
   .contactanos .contactar1 h2 {
     margin-top: 10px;
-    color: #F2F6D0;
-    background-color: #83C6BE;
+    color: var(--color-primario);
+    background-color: var(--color-boton);
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -551,14 +578,14 @@ button:hover {
     border-radius: 70px 70px 100 100;
   }
   .contactanos .contactar1 img {
-    width: 179px;
+    width: 20vh;
     height: auto;
-    position: absolute;
-    bottom: 0px;
-    right: 20px;
+    position: fixed;
+    bottom: 0vh;
+    right: 10px;
   }
   .contactanos .contactar2 label {
-    color: rgba(118, 103, 74, 0.7725490196);
+    color: var(--color-letra);
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 10px;
@@ -567,7 +594,7 @@ button:hover {
   .contactanos .contactar2 input {
     width: 60%;
     height: 30px;
-    background-color: #F2F6D0;
+    background-color: var(--color-input);
     border-radius: 5px;
     border: none;
     display: block;
@@ -576,7 +603,7 @@ button:hover {
   .contactanos .contactar2 textarea {
     width: 60%;
     height: 100px;
-    background-color: #F2F6D0;
+    background-color: var(--color-input);
     border-radius: 5px;
     border: none;
     display: block;
@@ -585,7 +612,7 @@ button:hover {
   }
   .contactanos .contactar2 button {
     width: 40%;
-    color: #F2F6D0;
+    color: var(--color-primario);
     font-size: 1.5rem;
     font-weight: bold;
     margin-left: 30%;
@@ -593,17 +620,18 @@ button:hover {
   .contactanos .contactar2 .redesSociales {
     position: fixed;
     bottom: 0;
-    left: 20px;
+    left: 10px;
   }
   .contactanos .contactar2 .redesSociales .redes {
-    margin: 10px;
+    width: 3vh;
+    margin: 5px;
   }
 }
 .filtrado {
   float: right;
 }
 .filtrado label {
-  color: rgba(118, 103, 74, 0.7725490196);
+  color: var(--color-letra);
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -647,7 +675,7 @@ button:hover {
   height: 44px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #F2F6D0;
+  color: var(--color-primario);
   margin-bottom: 100px;
 }
 
@@ -657,8 +685,8 @@ button:hover {
     height: 55vh;
     margin: 120;
     padding: 30px;
-    background-color: #F2F6D0;
-    border: 2px solid rgba(118, 103, 74, 0.4862745098);
+    background-color: var(--color-primario);
+    border: 2px solid var(--color-letra-input);
     border-radius: 50px;
   }
   .carta .informacion {
@@ -668,7 +696,7 @@ button:hover {
     width: 340px;
     height: 550px;
     border: transparent;
-    border-right: 2px solid rgba(118, 103, 74, 0.4862745098);
+    border-right: 2px solid var(--color-letra-input);
   }
   .carta .informacion .visual #pato-icono {
     position: absolute;
@@ -714,15 +742,15 @@ button:hover {
   }
   .carta .informacion .informacion-1 p {
     width: 150px;
-    background-color: #FDFFEA;
+    background-color: var(--color-fondo);
     margin-bottom: 5px;
     padding: 5px;
-    border: 1px solid rgba(118, 103, 74, 0.4862745098);
+    border: 1px solid var(--color-letra-input);
     border-radius: 20px;
     text-align: center;
   }
   .carta .informacion .informacion-1 .titulo {
-    color: rgba(118, 103, 74, 0.7725490196);
+    color: var(--color-letra);
   }
   .caracteristicas {
     width: 80vw;
@@ -770,8 +798,8 @@ button:hover {
     margin: auto;
     margin-top: 80px;
     padding: 30px;
-    background-color: #F2F6D0;
-    border: 2px solid rgba(118, 103, 74, 0.4862745098);
+    background-color: var(--color-primario);
+    border: 2px solid var(--color-letra-input);
     border-radius: 50px;
   }
   .carta .informacion {
@@ -781,7 +809,7 @@ button:hover {
     width: 72vw;
     height: 350px;
     border: transparent;
-    border-bottom: 2px solid rgba(118, 103, 74, 0.4862745098);
+    border-bottom: 2px solid var(--color-letra-input);
   }
   .carta .informacion .visual #pato-icono {
     position: absolute;
@@ -829,15 +857,15 @@ button:hover {
   }
   .carta .informacion .informacion-1 p {
     width: 19.5vw;
-    background-color: #FDFFEA;
+    background-color: var(--color-fondo);
     margin-bottom: 5px;
     padding: 5px;
-    border: 1px solid rgba(118, 103, 74, 0.4862745098);
+    border: 1px solid var(--color-letra-input);
     border-radius: 20px;
     text-align: center;
   }
   .carta .informacion .informacion-1 .titulo {
-    color: rgba(118, 103, 74, 0.7725490196);
+    color: var(--color-letra);
   }
   .caracteristicas {
     margin: 15vw;
@@ -876,7 +904,7 @@ button:hover {
 .usuario {
   width: 90%;
   height: 800px;
-  background-image: url("../img/leafpattern2.png");
+  background-image: var(--fondo-usuario);
   background-repeat: repeat;
   background-size: 70rem;
   border-radius: 40px;
@@ -890,11 +918,11 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 40px;
-  border-bottom: 2px solid rgba(118, 103, 74, 0.7725490196);
+  border-bottom: 2px solid var(--color-letra);
 }
 .usuario .imagen-usuario button {
   position: absolute;
-  top: 50%;
+  top: 47vh;
   left: 25%;
 }
 .usuario hr {
@@ -952,7 +980,7 @@ button:hover {
     width: 50%;
     height: 40px;
     padding: 60px;
-    background-color: #F2F6D0;
+    background-color: var(--color-primario);
     border-radius: 70px;
     display: block;
     margin: auto;
@@ -1045,7 +1073,7 @@ button:hover {
     width: 50%;
     height: 40px;
     padding: 65px;
-    background-color: #F2F6D0;
+    background-color: var(--color-primario);
     border-radius: 70px;
     display: block;
     margin: auto;

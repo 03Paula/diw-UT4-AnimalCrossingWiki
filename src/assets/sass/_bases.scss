@@ -6,18 +6,21 @@ $colorSecundario: #6B8F71;
 $colorFondo:#FDFFEA;
 $colorBoton: #83C6BE;
 $colorHover: #37718E;
+$colorInput: #F2F6D0;
 $colorletra: #76674ac5;
 $colorLetrap: #0000008e;
 $colorLetraInput: #76674a7c;
 
 //Variables para el modo oscuro.
-$colorPrimarioOsc : #201F1F;
+$colorPrimarioOsc : #F2F6D0;
 $colorSecundarioOsc : #3E5542;
 $colorBotonOsc : #6AA49D;
 $colorHoverOsc : #245066;
-$colorLetraOsc : #F2F6D0;
+$colorInputOsc: #b0b395;
+$colorletraOsc : #F2F6D0;
+$colorLetrapOsc: #F2F6D0;
 $colorFondoOsc: #201F1F;
-
+$colorLetraInputOsc: #76674a7c;
 
 *{
     margin : 0;
@@ -32,13 +35,13 @@ html{
 }
 
 body{
-    background-color: $colorFondo;
+    background-color: var(--color-fondo);
     height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Sura';
-    color: $colorletra;
+    color: var(--color-letra);
     font-weight: bold;
 }
 
@@ -69,12 +72,12 @@ h6{
 .p-desktop{
     font-size: calc(1em + 1.25vw);
     font-weight: bold;
-    color: $colorLetrap;
+    color: var(--color-letra-p);
 }
 
 p{
     font-size: 16px;
     font-weight: bold;
-    color: $colorLetrap;
+    color: var(--color-letra-p);
 }
 

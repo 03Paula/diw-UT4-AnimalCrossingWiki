@@ -1,4 +1,12 @@
+const colorSwitch = document.querySelector('button[type="button"]');
+
 function cambiarTema(){
-    var cuerpoweb = document.body;
-    cuerpoweb.classList.toggle('oscuro')
+    if (document.documentElement.getAttribute("tema") == "dia"){
+        document.documentElement.setAttribute("tema","noche");
+    }
+    else{
+        document.documentElement.setAttribute("tema","dia");
+    }
 }
+
+colorSwitch.addEventListener("click", cambiarTema)

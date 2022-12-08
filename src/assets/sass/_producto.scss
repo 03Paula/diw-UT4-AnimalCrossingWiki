@@ -4,8 +4,8 @@
         height: 55vh;
         margin: 120;
         padding: 30px;
-        background-color: $colorPrimario;
-        border: 2px solid $colorLetraInput;
+        background-color: var(--color-primario);
+        border: 2px solid var(--color-letra-input);
         border-radius: 50px;
     
         .informacion{ 
@@ -14,7 +14,7 @@
                 width: 340px;
                 height: 550px;
                 border: transparent;
-                border-right: 2px solid $colorLetraInput;
+                border-right: 2px solid var(--color-letra-input);
     
                 #pato-icono{
                     position: absolute;
@@ -70,16 +70,16 @@
 
                 p{
                     width: 150px;
-                    background-color: $colorFondo;
+                    background-color: var(--color-fondo);
                     margin-bottom: 5px;
                     padding: 5px;
-                    border: 1px solid $colorLetraInput;
+                    border: 1px solid var(--color-letra-input);
                     border-radius: 20px;
                     text-align: center;
                 }
     
                 .titulo{
-                    color: $colorletra;
+                    color: var(--color-letra);
                 }
             }   
         }   
@@ -139,8 +139,8 @@
         margin: auto;
         margin-top: 80px;
         padding: 30px;
-        background-color: $colorPrimario;
-        border: 2px solid $colorLetraInput;
+        background-color: var(--color-primario);
+        border: 2px solid var(--color-letra-input);
         border-radius: 50px;
 
         .informacion{ 
@@ -149,7 +149,7 @@
                 width: 72vw;
                 height: 350px;
                 border: transparent;
-                border-bottom: 2px solid $colorLetraInput;
+                border-bottom: 2px solid var(--color-letra-input);
     
                 #pato-icono{
                     position: absolute;
@@ -208,16 +208,16 @@
                 
                 p{
                     width: 19.5vw;
-                    background-color: $colorFondo;
+                    background-color: var(--color-fondo);
                     margin-bottom: 5px;
                     padding: 5px;
-                    border: 1px solid $colorLetraInput;
+                    border: 1px solid var(--color-letra-input);
                     border-radius: 20px;
                     text-align: center;
                 }
     
                 .titulo{
-                    color: $colorletra;
+                    color: var(--color-letra);
                 }
             }   
         }

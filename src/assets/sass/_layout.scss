@@ -1,12 +1,12 @@
 // las clases relacionadas con el layout de nuestra aplicación como el grid que estemos empleando
 
 header{
-    background-color: $colorSecundario;
+    background-color: var(--color-secundario);
     width:100%;
-    height: 130px;
+    height: 100px;
     .logo{
-        width: 210px;
-        height: 130px;
+        width: 150px;
+        height: auto;
     }
 
     .header{
@@ -44,7 +44,7 @@ header{
             padding:10px;
             border-radius: 20px;
             background-color: transparent;
-            color: $colorPrimario;
+            color: var(--color-primario);
             font-weight: 800;
             
            
@@ -52,7 +52,7 @@ header{
                 outline: none;
             }
             &::placeholder{
-                color: $colorPrimario;
+                color: var(--color-primario);
                 font-size: 16px;
                 font-weight: bolder;
 
@@ -63,6 +63,7 @@ header{
            margin-right: 5px;
         }
     }
+
     
     p{
         color: #F2F6D0;
@@ -75,7 +76,7 @@ header{
 
     a{
         text-decoration: none;
-        color: $colorPrimario;
+        color: var(--color-primario);
         font-family: 'Sura';
         font-size: large;
         font-size: 1.5em;
@@ -98,15 +99,15 @@ header{
 }
 
 footer{
-    background-color: $colorSecundario;
+    background-color: var(--color-secundario);
     position: static;
-    bottom: 0%;
+    bottom: 0vh;
     width: 100%;
     height: 80px;
 
     a{
         text-decoration: none;
-        color: $colorPrimario;
+        color: var(--color-primario);
         font-family: 'Sura';
         font-size: large;
         font-size: 1.5em;
@@ -136,7 +137,7 @@ footer{
     .footerSesion{
         margin-top: 327px;
         position:static;
-        bottom: 0px;
+        bottom: 0vh;
         .redes{
             display: absolute;
             justify-items: flex-start;
@@ -155,7 +156,8 @@ footer{
 }
 
 .footerOceano{
-    background-color: $colorFondo;
+    background-color: var(--color-fondo);
     background-image: url('../img/footerOceano.png');
     background-repeat: repeat-x;
 }
+

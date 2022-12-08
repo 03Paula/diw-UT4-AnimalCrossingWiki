@@ -1,6 +1,6 @@
 
 .formulario{
-    background-image: url('../img/leafpattern.png');
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 10rem;
     
@@ -16,24 +16,25 @@
     h2{
         display: block;
         margin: auto;
-        color: $colorletra;
+        color: var(--color-letra);
     }
     
     input{
         width: 50%;
         height: 40px;
-        background-color: $colorPrimario;
+        background-color: var(--color-input);
         border: none;
         display: block;
         margin: auto;
         margin-top: 60px;
         margin-bottom: 40px;
+        border-radius: 10px;
         
     }
 
     
     a{
-        color: $colorletra;
+        color: var(--color-letra);
         text-decoration: none;
         font-size: calc(0.7em + 0.3vw);
         font-weight:bolder;
@@ -43,7 +44,7 @@
     }
 
     ::placeholder{
-        color: $colorLetraInput;
+        color: var(--color-letra-input);
         font-weight:600;
         font-size: calc(0.5em + 0.5vw);
     }
@@ -52,7 +53,7 @@
     .enviar{
         width: 200px;
         margin-bottom: 20px;
-        color: $colorPrimario;
+        color: var(--color-primario);
         font-weight:600;
         font-size: 1rem;
         

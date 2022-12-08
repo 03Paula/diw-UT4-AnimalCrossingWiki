@@ -28,7 +28,7 @@
                 width: 50%;
                 height: 40px;
                 padding: 60px;
-                background-color: $colorPrimario;
+                background-color: var(--color-primario);
                 
                 border-radius: 70px;
                 display: block;
@@ -93,6 +93,7 @@
         text-align: center;
         -webkit-transform: rotate(-5deg);
     }
+
 }
 
 @media screen and (max-width: 700px){
@@ -124,7 +125,7 @@
                 width: 50%;
                 height: 40px;
                 padding: 65px;
-                background-color: $colorPrimario;
+                background-color: var(--color-primario);
                 
                 border-radius: 70px;
                 display: block;
