@@ -1,0 +1,272 @@
+
+//Hoja de estilo para la página del producto.
+@media screen and (min-width:1075px){
+    .carta{
+        width: 75vw;
+        height: 550px;
+        margin: 120;
+        padding: 30px;
+        background-color: var(--color-input);
+        border: 2px solid var(--color-letra-input);
+        border-radius: 50px;
+    
+        .informacion{ 
+            display: flex;
+            .visual{
+                width: 340px;
+                height: 550px;
+                border: transparent;
+                border-right: 2px solid var(--color-letra-input);
+    
+                #pato-icono{
+                    position: absolute;
+                    top: 280px;
+                    left: 140px;
+                }
+    
+                #fav-icono{
+                    width: 40px;
+                    height: auto;
+                    position: absolute;
+                    top: 280px;
+                    left: 420px;
+                }
+    
+                #miranda{
+                    width: 250px;
+                    margin: 40px;
+                    margin-top: 100px;
+                }
+            }
+    
+            .informacion-1{
+                width: 80%;
+                float: right;
+                margin-top: 120px;
+    
+                .info,.info-1, .info-2, .info-3{
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin: 20px;
+                    margin-bottom: 20px;
+    
+    
+                    #genero {
+                        width: 14px;
+                        margin-left: 5px;
+                    }
+    
+                    .lema{
+                        width: 40vw;
+                    }
+                    
+                }
+                
+                h1{
+                    position:absolute;
+                    top: 260px;
+                    left: 50%;
+                    color: $colorletra;
+                }
+
+                p{
+                    width: 150px;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    background-color: var(--color-fondo);
+                    border: 1px solid var(--color-letra-input);
+                    border-radius: 20px;
+                }
+    
+                .titulo{
+                    color: var(--color-letra);
+                }
+            }   
+        }   
+    }
+    
+    .caracteristicas{
+        width: 80vw;
+        margin: 120px;
+        padding: auto;
+        
+        h5,p{
+            width: 700px;
+            margin-bottom: 10px;
+        }
+        img{
+            height: max-content;
+            float: right;
+            margin-top: 100px;
+        }
+        
+    }
+    
+    .especie{
+        margin: 120px;
+        h5{
+            margin-bottom: 10px;
+        }
+        
+        .scroll{
+            img{
+                margin-right: 50px;
+            }
+            line-height: 3em;
+            display: flex;
+            padding: 10px;
+            margin-bottom: 40px;
+            overflow-x: scroll;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x proximity;
+        }
+    
+        #volver{
+            position: absolute;
+            left: 20px;
+            cursor: pointer;
+        }
+    
+    }
+
+}  
+
+@media screen and (max-width: 1075px){
+
+    .carta{
+        width: 75vw;
+        height: 920px;
+        display: block;
+        margin: auto;
+        margin-top: 80px;
+        padding: 30px;
+        background-color: var(--color-input);
+        border: 2px solid var(--color-letra-input);
+        border-radius: 50px;
+
+        .informacion{ 
+            display: flex;
+            .visual{
+                width: 72vw;
+                height: 350px;
+                border: transparent;
+                border-bottom: 2px solid var(--color-letra-input);
+    
+                #pato-icono{
+                    position: absolute;
+                    top: 240px;
+                    left: 15%;
+                }
+    
+                #fav-icono{
+                    width: 40px;
+                    height: auto;
+                    position: absolute;
+                    top: 240px;
+                    left: 80%;
+                }
+    
+                #miranda{
+                    width: 200px;;
+                    display: block;
+                    margin: auto;
+                    margin-top: 25px;
+                }
+            }
+
+            .informacion-1{
+                width: 40%;
+                margin-top: 350px;
+                position: absolute;
+                left: 13vw;
+                .info,.info-1, .info-2, .info-3{
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 15px;
+                    margin-bottom: 20px;
+                    margin-left: 13%;
+    
+    
+                    #genero {
+                        width: 14px;
+                        margin-left: 5px;
+                    }
+    
+                    .lema{
+                        width: 63vw;
+                    }
+                    
+                }
+                
+                h1{
+                    margin-top: 20px;
+                    margin-left: 60%;
+                }
+            
+                
+                p{
+                    width: 20vw;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    background-color: var(--color-fondo);
+                    border: 1px solid var(--color-letra-input);
+                    border-radius: 20px;
+                }
+    
+                .titulo{
+                    color: var(--color-letra);
+                }
+            }   
+        }
+
+    }
+
+    .caracteristicas{
+        margin: 15vw;
+        padding: auto;
+        
+        h5,p{
+            width: 66vw;
+            margin-bottom: 10px;
+        }
+        img{
+            display: none;
+        }
+        
+    }
+    
+    .especie{
+        margin: 15vw;
+        h5{
+            margin-bottom: 10px;
+        }
+        
+        .scroll{
+            img{
+                width: 30vw;
+                margin-right: 4vw;
+            }
+            line-height: 3em;
+            display: flex;
+            padding: 10px;
+            margin-bottom: 5vw;
+            overflow-x: scroll;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x proximity;
+        }
+    
+        #volver{
+            position: absolute;
+            left: 20px;
+            cursor: pointer;
+            
+        }
+    
+    }
+}

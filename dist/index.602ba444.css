@@ -1,5 +1,4 @@
-@import "https://fonts.google.com/specimen/Sura?query=sura";
-@import "https://fonts.google.com/specimen/M+PLUS+Rounded+1c?query=rounded+";
+@import "https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&family=Sura&display=swap";
 * {
   box-sizing: border- boss;
   margin: 0;
@@ -13,13 +12,13 @@ html {
 }
 
 body {
-  background-color: var(--color-fondo);
   height: 100%;
+  background-color: var(--color-fondo);
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-letra);
-  font-family: Sura;
+  font-family: Sura, serif;
   font-weight: bold;
 }
 
@@ -55,19 +54,22 @@ h6 {
 
 p {
   color: var(--color-letra-p);
+  font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
 
 header {
-  background-color: var(--color-secundario);
   width: 100%;
   height: 100px;
+  background-color: var(--color-secundario);
 }
 
 header .logo {
-  width: 150px;
+  width: 140px;
   height: auto;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 header .header {
@@ -95,6 +97,7 @@ header .headerbusqueda .busqueda {
 header .headerbusqueda .busqueda img {
   width: 32px;
   height: 32px;
+  cursor: pointer;
 }
 
 header .headerbusqueda input {
@@ -128,15 +131,18 @@ header .headerbusqueda input::placeholder {
 }
 
 header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+  cursor: pointer;
   margin-right: 5px;
 }
 
 header p {
-  color: #f2f6d0;
+  color: var(--color-fondo);
   cursor: pointer;
+  margin-left: 5px;
   margin-right: 20px;
   font-family: Sura;
-  font-size: 1.25em;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 header a {
@@ -159,12 +165,16 @@ header a :visited {
   header .corazon {
     margin-right: 10px;
   }
+
+  header input, header .favorito, header .busqueda {
+    display: none;
+  }
 }
 
 footer {
-  background-color: var(--color-secundario);
   width: 100%;
   height: 80px;
+  background-color: var(--color-secundario);
   position: static;
   bottom: 0;
 }
@@ -181,13 +191,15 @@ footer a :visited {
   text-decoration: none;
 }
 
-footer .footer .redes {
+footer .footer .redes, footer .footerSesion .redes {
   display: absolute;
+  cursor: pointer;
   justify-items: flex-start;
   margin: 20px 8px 20px 20px;
 }
 
-footer .footer p {
+footer .footer p, footer .footerSesion p {
+  color: var(--color-fondo);
   display: absolute;
   float: right;
   margin: 25px;
@@ -198,19 +210,6 @@ footer .footerSesion {
   margin-top: 327px;
   position: static;
   bottom: 0;
-}
-
-footer .footerSesion .redes {
-  display: absolute;
-  justify-items: flex-start;
-  margin: 20px 8px 20px 20px;
-}
-
-footer .footerSesion p {
-  display: absolute;
-  float: right;
-  margin: 25px;
-  font-size: 1rem;
 }
 
 .footerOceano {
@@ -250,7 +249,6 @@ footer .footerSesion p {
 .btn-large-desktop {
   width: 30%;
   height: 50px;
-  color: var(--color-primario);
   font-size: large;
   font-weight: bold;
 }
@@ -258,59 +256,70 @@ footer .footerSesion p {
 .btn-medium-desktop {
   width: 170px;
   height: 50px;
-  color: var(--color-primario);
-  font-size: large;
-  font-weight: 800px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-small {
+  width: 122px;
+  height: 44px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 button {
   width: 75px;
   height: 40px;
+  color: var(--color-primario);
   background-color: var(--color-boton);
   border: var(--color-boton);
+  cursor: pointer;
   border-radius: 40px;
 }
 
 button:hover {
-  background-color: var(--color-hover);
   color: var(--color-primario);
+  background-color: var(--color-hover);
 }
 
 @media screen and (min-width: 900px) {
   .inicio {
     min-width: 100%;
-    height: auto;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     flex-flow: row;
     display: flex;
   }
 
   .inicio .imagen2 {
-    background-image: var(--fondo-hojas);
     width: 50%;
     height: 90vh;
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 20rem;
   }
 
   .inicio .imagen2 img {
-    width: 50%;
+    width: 40vh;
     justify-content: center;
-    margin: 220px auto auto;
+    margin: 20vh auto auto;
     display: block;
   }
 
   .inicio .bienvenida {
     width: 50%;
-    height: 80vh;
+    height: 90vh;
     flex-flow: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     display: flex;
+    position: absolute;
+    left: 50%;
   }
 
   .inicio .bienvenida h1 {
     text-align: center;
-    margin-top: 70px;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -322,10 +331,6 @@ button:hover {
     font-size: 24px;
   }
 
-  .inicio .bienvenida button {
-    margin-bottom: 50px;
-  }
-
   .inicio .bienvenida .redesSociales {
     display: block;
     position: absolute;
@@ -333,11 +338,16 @@ button:hover {
   }
 
   .inicio .bienvenida .redesSociales .redes {
+    width: 3vh;
+    cursor: pointer;
     padding: 5px;
   }
 
   .personaje {
     width: 50%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     flex-flow: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -348,7 +358,7 @@ button:hover {
   }
 
   .personaje .personajes {
-    width: 22%;
+    width: 12vh;
     height: auto;
   }
 }
@@ -365,15 +375,15 @@ button:hover {
   }
 
   .inicio .imagen2 {
-    background-image: var(--fondo-hojas);
     width: 100%;
     height: 50vh;
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 40rem;
   }
 
   .inicio .imagen2 img {
-    width: 300px;
+    width: 35vh;
     height: auto;
     margin: auto;
     padding-top: 55px;
@@ -382,34 +392,38 @@ button:hover {
 
   .inicio .bienvenida {
     text-align: center;
-    margin: 20px;
+    margin: 40px;
     display: inline;
   }
 
   .inicio .bienvenida button {
     width: 300px;
-    margin: 20px auto auto;
+    margin: 50px auto auto;
     display: block;
   }
 
   .inicio .bienvenida p {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 20px;
   }
 
   .inicio .bienvenida .redesSociales {
     align-items: center;
-    display: inline-block;
+    display: block;
     position: absolute;
-    bottom: 35.5%;
+    top: 58%;
     left: 30%;
   }
 
   .inicio .bienvenida .redesSociales .redes {
+    cursor: pointer;
     padding: 10px;
   }
 
   .inicio .personaje {
-    display: inline;
+    display: inline-flex;
   }
 
   .inicio .personaje #isabelle {
@@ -417,19 +431,21 @@ button:hover {
   }
 
   .inicio .personaje .personajes {
-    width: 8vh;
+    width: 10vh;
     height: auto;
-    position: static;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
   }
 }
 
 .formulario {
-  background-image: var(--fondo-hojas);
-  text-align: center;
   width: 50%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  text-align: center;
+  background-image: var(--fondo-hojas);
   background-repeat: repeat;
   background-size: 10rem;
   border-radius: 50px;
@@ -450,50 +466,53 @@ button:hover {
   border: none;
   border-radius: 10px;
   margin: 60px auto 40px;
+  padding-left: 10px;
   display: block;
+}
+
+.formulario input:last-of-type {
+  margin-bottom: 10px;
+}
+
+.formulario input::-moz-placeholder {
+  color: var(--color-letra-input);
+  font-size: calc(.5em + .5vw);
+  font-weight: 600;
+}
+
+.formulario input:-ms-input-placeholder {
+  color: var(--color-letra-input);
+  font-size: calc(.5em + .5vw);
+  font-weight: 600;
+}
+
+.formulario input::placeholder {
+  color: var(--color-letra-input);
+  font-size: calc(.5em + .5vw);
+  font-weight: 600;
 }
 
 .formulario a {
   color: var(--color-letra);
-  margin-bottom: 10px;
-  font-size: calc(.7em + .3vw);
+  font-size: calc(.6em + .3vw);
   font-weight: bolder;
   text-decoration: none;
-  top: 0;
 }
 
-.formulario ::-moz-placeholder {
-  color: var(--color-letra-input);
-  font-size: calc(.5em + .5vw);
-  font-weight: 600;
-}
-
-.formulario :-ms-input-placeholder {
-  color: var(--color-letra-input);
-  font-size: calc(.5em + .5vw);
-  font-weight: 600;
-}
-
-.formulario ::placeholder {
-  color: var(--color-letra-input);
-  font-size: calc(.5em + .5vw);
-  font-weight: 600;
-}
-
-.formulario .enviar {
-  width: 200px;
-  color: var(--color-primario);
+.formulario .btn-medium-desktop {
+  margin-top: 30px;
   margin-bottom: 20px;
-  font-size: 1rem;
-  font-weight: 600;
+}
+
+.imagenBienvenida {
+  position: absolute;
+  top: 650px;
+  right: 20px;
 }
 
 .imagenBienvenida img {
   width: 327px;
-  height: 309px;
-  position: fixed;
-  bottom: 47px;
-  right: 0;
+  height: auto;
 }
 
 .imagenRedonda {
@@ -505,14 +524,13 @@ button:hover {
 @media screen and (min-width: 800px) {
   .contactanos {
     width: 100%;
-    height: 87vh;
+    height: 90vh;
     display: flex;
   }
 
   .contactanos .contactar1 {
-    background-image: var(--fondo-hojas);
     width: 50%;
-    height: 90vh;
+    background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 20rem;
     flex-flow: column;
@@ -522,9 +540,9 @@ button:hover {
   }
 
   .contactanos .contactar1 h2 {
+    text-transform: uppercase;
     color: var(--color-primario);
     background-color: var(--color-boton);
-    text-transform: uppercase;
     border-radius: 70px 70px 100px 100px;
     margin-top: 40px;
     padding: 20px;
@@ -538,8 +556,8 @@ button:hover {
   }
 
   .contactanos .contactar1 #mabel {
-    height: 30vh;
     width: auto;
+    height: 30vh;
     position: relative;
     bottom: 0;
   }
@@ -547,7 +565,7 @@ button:hover {
   .contactanos .contactar2 {
     width: 50%;
     margin-left: 80px;
-    padding-top: 10%;
+    padding-top: 9%;
   }
 
   .contactanos .contactar2 label {
@@ -565,6 +583,7 @@ button:hover {
     background-color: var(--color-input);
     border: none;
     border-radius: 5px;
+    padding-left: 10px;
     display: block;
   }
 
@@ -575,18 +594,36 @@ button:hover {
     border: none;
     border-radius: 5px;
     margin-bottom: 30px;
+    padding-left: 10px;
     display: block;
   }
 
-  .contactanos .contactar2 button {
+  .contactanos .contactar2 textarea::-moz-placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contactanos .contactar2 textarea:-ms-input-placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contactanos .contactar2 textarea::placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contactanos .contactar2 .btn-small {
     width: 150px;
-    color: var(--color-primario);
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin-bottom: 20px;
     display: inline-block;
   }
 
   .contactanos .contactar2 .redesSociales {
+    cursor: pointer;
     position: fixed;
     bottom: 0;
     right: 50px;
@@ -594,14 +631,6 @@ button:hover {
 }
 
 @media screen and (max-width: 800px) {
-  header input, header .favorito, header .busqueda {
-    display: none;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
   .contactanos {
     width: 100%;
     height: 90vh;
@@ -618,9 +647,9 @@ button:hover {
   }
 
   .contactanos .contactar1 h2 {
+    text-transform: uppercase;
     color: var(--color-primario);
     background-color: var(--color-boton);
-    text-transform: uppercase;
     border-radius: 70px 70px 100px 100px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -650,6 +679,7 @@ button:hover {
     border: none;
     border-radius: 5px;
     margin-left: 20%;
+    padding-left: 10px;
     display: block;
   }
 
@@ -661,15 +691,30 @@ button:hover {
     border-radius: 5px;
     margin-bottom: 30px;
     margin-left: 20%;
+    padding-left: 10px;
     display: block;
   }
 
-  .contactanos .contactar2 button {
-    width: 40%;
-    color: var(--color-primario);
-    margin-left: 30%;
-    font-size: 1.5rem;
-    font-weight: bold;
+  .contactanos .contactar2 textarea::-moz-placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contactanos .contactar2 textarea:-ms-input-placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contactanos .contactar2 textarea::placeholder {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contactanos .contactar2 .btn-small {
+    margin-left: 20%;
   }
 
   .contactanos .contactar2 .redesSociales {
@@ -680,32 +725,46 @@ button:hover {
 
   .contactanos .contactar2 .redesSociales .redes {
     width: 3vh;
+    cursor: pointer;
     margin: 5px;
   }
 }
 
 .filtrado {
-  float: right;
+  position: absolute;
+  top: 120px;
+  right: 20px;
 }
 
 .filtrado label {
   color: var(--color-letra);
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: bold;
+}
+
+.filtrado select, .filtrado option {
+  width: auto;
+  height: 30px;
+  text-align: center;
+  color: #76674ac5;
+  background-color: var(--color-primario);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .lista {
   display: flex;
 }
 
-.lista .vecinos, .lista .peces {
-  width: 200px;
-  height: 170px;
+.lista .peces, .lista .insectos, .lista .vecinos {
+  width: 170px;
+  height: 140px;
 }
 
 .lista .musica {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
 }
 
 .lista .col-0, .lista .col-1, .lista .col-2, .lista .col-3 {
@@ -714,8 +773,13 @@ button:hover {
   width: max-content;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  padding: 100px 7.5% 7.5%;
+  margin: auto auto auto 20px;
+  padding: 100px 2% 2%;
+  display: block;
+}
+
+.lista .col-0 #ciudad-animal, .lista .col-1 #ciudad-animal, .lista .col-2 #ciudad-animal, .lista .col-3 #ciudad-animal {
+  width: 230px;
 }
 
 .lista .icono {
@@ -729,20 +793,27 @@ button:hover {
 }
 
 .lista button {
-  width: 122px;
-  height: 44px;
-  color: var(--color-primario);
   margin-bottom: 100px;
   margin-left: 15%;
-  font-size: 1.5rem;
-  font-weight: bold;
+}
+
+@media screen and (max-width: 920px) {
+  .col-0:last-child, .col-1:last-child, .col-2:last-child, .col-3:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .col-0:nth-last-child(2), .col-1:nth-last-child(2), .col-2:nth-last-child(2), .col-3:nth-last-child(2) {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1075px) {
   .carta {
     width: 75vw;
-    height: 55vh;
-    background-color: var(--color-primario);
+    height: 550px;
+    background-color: var(--color-input);
     border: 2px solid var(--color-letra-input);
     border-radius: 50px;
     margin: 120px;
@@ -762,7 +833,7 @@ button:hover {
 
   .carta .informacion .visual #pato-icono {
     position: absolute;
-    top: 300px;
+    top: 280px;
     left: 140px;
   }
 
@@ -770,7 +841,7 @@ button:hover {
     width: 40px;
     height: auto;
     position: absolute;
-    top: 300px;
+    top: 280px;
     left: 420px;
   }
 
@@ -780,9 +851,9 @@ button:hover {
   }
 
   .carta .informacion .informacion-1 {
-    float: right;
     width: 80%;
-    margin-top: 75px;
+    float: right;
+    margin-top: 120px;
   }
 
   .carta .informacion .informacion-1 .info, .carta .informacion .informacion-1 .info-1, .carta .informacion .informacion-1 .info-2, .carta .informacion .informacion-1 .info-3 {
@@ -803,6 +874,7 @@ button:hover {
   }
 
   .carta .informacion .informacion-1 h1 {
+    color: #76674ac5;
     position: absolute;
     top: 260px;
     left: 50%;
@@ -810,9 +882,9 @@ button:hover {
 
   .carta .informacion .informacion-1 p {
     width: 150px;
+    text-align: center;
     background-color: var(--color-fondo);
     border: 1px solid var(--color-letra-input);
-    text-align: center;
     border-radius: 20px;
     margin-bottom: 5px;
     padding: 5px;
@@ -850,11 +922,14 @@ button:hover {
   }
 
   .especie .scroll {
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x proximity;
+    scroll-snap-type: x proximity;
     margin-bottom: 40px;
     padding: 10px;
     line-height: 3em;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
   }
 
   .especie .scroll img {
@@ -870,9 +945,9 @@ button:hover {
 
 @media screen and (max-width: 1075px) {
   .carta {
-    width: 74vw;
-    height: 860px;
-    background-color: var(--color-primario);
+    width: 75vw;
+    height: 920px;
+    background-color: var(--color-input);
     border: 2px solid var(--color-letra-input);
     border-radius: 50px;
     margin: 80px auto auto;
@@ -932,7 +1007,7 @@ button:hover {
   }
 
   .carta .informacion .informacion-1 .info .lema, .carta .informacion .informacion-1 .info-1 .lema, .carta .informacion .informacion-1 .info-2 .lema, .carta .informacion .informacion-1 .info-3 .lema {
-    width: 60vw;
+    width: 63vw;
   }
 
   .carta .informacion .informacion-1 h1 {
@@ -941,10 +1016,10 @@ button:hover {
   }
 
   .carta .informacion .informacion-1 p {
-    width: 19.5vw;
+    width: 20vw;
+    text-align: center;
     background-color: var(--color-fondo);
     border: 1px solid var(--color-letra-input);
-    text-align: center;
     border-radius: 20px;
     margin-bottom: 5px;
     padding: 5px;
@@ -960,7 +1035,7 @@ button:hover {
   }
 
   .caracteristicas h5, .caracteristicas p {
-    width: 65vw;
+    width: 66vw;
     margin-bottom: 10px;
   }
 
@@ -977,16 +1052,19 @@ button:hover {
   }
 
   .especie .scroll {
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x proximity;
+    scroll-snap-type: x proximity;
     margin-bottom: 5vw;
     padding: 10px;
     line-height: 3em;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
   }
 
   .especie .scroll img {
     width: 30vw;
-    margin-right: 50px;
+    margin-right: 4vw;
   }
 
   .especie #volver {
@@ -1019,7 +1097,7 @@ button:hover {
 
 .usuario .imagen-usuario button {
   position: absolute;
-  top: 47vh;
+  top: 470px;
   left: 25%;
 }
 
@@ -1056,166 +1134,135 @@ button:hover {
   margin: 20px;
 }
 
-@media screen and (min-width: 700px) {
-  .logotipo img {
-    width: 210px;
-    height: auto;
-    margin: 10px;
+.logotipo img {
+  width: 210px;
+  height: auto;
+  margin: 10px;
+  animation-name: aparecer;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
 
-  .error img {
-    width: 250px;
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
-    margin: auto;
-    display: block;
+  50% {
+    opacity: .5;
+    transform: translateX(50px);
   }
 
-  .error .dialogo {
-    width: 90vw;
-    height: 300px;
-    position: absolute;
-    top: 640px;
-  }
-
-  .error .dialogo h5 {
-    width: 50%;
-    height: 40px;
-    background-color: var(--color-primario);
-    text-align: center;
-    border-radius: 70px;
-    margin: auto auto auto 20%;
-    padding: 60px;
-    display: block;
-  }
-
-  .error .dialogo p {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    text-align: center;
-    position: absolute;
-    top: 120px;
-    left: 50%;
-  }
-
-  .error .dialogo #respuesta {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    text-align: center;
-    cursor: pointer;
-    background-color: #eeedae;
-    border-radius: 50px;
-    padding: 20px;
-    text-decoration: underline;
-    position: absolute;
-    bottom: 280px;
-    left: 50%;
-  }
-
-  .error .puntero {
-    width: 30px;
-    animation: 1s linear infinite slide;
-    display: block;
-    position: absolute;
-    top: 600px;
-    left: 62%;
-    -webkit-transform: rotate(90deg);
-  }
-
-  @keyframes slide {
-    from {
-      left: 61.5%;
-    }
-
-    to {
-      left: 62%;
-    }
-  }
-
-  #nombrePersonaje {
-    width: 200px;
-    text-align: center;
-    background-color: #b89e70;
-    border-radius: 50px;
-    padding: 10px;
-    display: block;
-    position: absolute;
-    top: 600px;
-    left: 23%;
-    -webkit-transform: rotate(-5deg);
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+.error img {
+  width: 250px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.error .dialogo {
+  width: 90vw;
+  height: 300px;
+  position: absolute;
+  top: 640px;
+}
+
+.error .dialogo h5 {
+  width: 60%;
+  height: 40px;
+  text-align: center;
+  background-color: var(--color-primario);
+  border-radius: 70px;
+  margin: auto auto auto 20%;
+  padding: 60px;
+  display: block;
+}
+
+.error .dialogo p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+}
+
+.error .dialogo #respuesta {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  cursor: pointer;
+  background-color: #eeedae;
+  border-radius: 50px;
+  padding: 20px;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+}
+
+.error .puntero {
+  width: 30px;
+  height: auto;
+  animation: 1s linear infinite slide;
+  display: block;
+  position: absolute;
+  top: 600px;
+  left: 62%;
+  -webkit-transform: rotate(90deg);
+}
+
+@keyframes slide {
+  from {
+    left: 61.5%;
+  }
+
+  to {
+    left: 62%;
+  }
+}
+
+#nombrePersonaje {
+  width: 200px;
+  text-align: center;
+  background-color: #b89e70;
+  border-radius: 50px;
+  padding: 10px;
+  display: block;
+  position: absolute;
+  top: 600px;
+  left: 23%;
+  -webkit-transform: rotate(-5deg);
+}
+
 @media screen and (max-width: 700px) {
-  .logotipo img {
-    width: 210px;
-    height: auto;
-    margin: 10px;
-  }
-
-  .error img {
-    width: 250px;
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
-    margin: auto;
-    display: block;
-  }
-
-  .error .dialogo {
-    width: 90vw;
-    height: 300px;
-    position: absolute;
-    top: 640px;
-  }
-
   .error .dialogo h5 {
     width: 50%;
-    height: 40px;
-    background-color: var(--color-primario);
-    text-align: center;
-    border-radius: 70px;
-    margin: auto auto auto 15%;
+    margin-left: 15%;
     padding: 65px;
-    display: block;
   }
 
   .error .dialogo p {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    text-align: center;
-    position: absolute;
     top: 140px;
-    left: 50%;
   }
 
   .error .dialogo #respuesta {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    text-align: center;
-    cursor: pointer;
-    background-color: #eeedae;
-    border-radius: 50px;
     padding: 10px;
-    text-decoration: underline;
-    position: absolute;
-    bottom: 280px;
     left: 45%;
   }
 
   .error .puntero {
-    width: 30px;
-    animation: 1s linear infinite slide;
-    display: block;
-    position: absolute;
     top: 610px;
     left: 50%;
-    -webkit-transform: rotate(90deg);
   }
 
   @keyframes slide {
@@ -1230,12 +1277,6 @@ button:hover {
 
   #nombrePersonaje {
     width: 120px;
-    text-align: center;
-    background-color: #b89e70;
-    border-radius: 50px;
-    padding: 10px;
-    display: block;
-    position: absolute;
     top: 630px;
     left: 15%;
     -webkit-transform: rotate(-7deg);

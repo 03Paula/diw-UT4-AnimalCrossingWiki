@@ -3,6 +3,3 @@ node_modules
 
 # Ignora la carpeta parcel-cache
 .parcel-cache
-
-# Ignora el archivo package-lock.json.
-package-lock.json

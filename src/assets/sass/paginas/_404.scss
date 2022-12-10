@@ -1,0 +1,158 @@
+
+//Hoja de estilo para la página de error 404.
+    .logotipo{
+        img{
+            width: 210;
+            height: auto;
+            margin: 10px;
+
+            animation-name: aparecer;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+
+        }
+    }
+    @keyframes aparecer {
+        0%{
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        50%{
+            opacity: 0.5;
+            transform: translateX(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    
+    .error{ 
+        img{
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    
+        .dialogo{
+            width: 90vw;
+            height: 300px;
+            position: absolute;
+            top: 640px;
+            
+            h5{
+                width: 60%;
+                height: 40px;
+                text-align: center;
+                display: block;
+                margin: auto;
+                margin-left: 20%;
+                padding: 60px;
+                background-color: var(--color-primario);
+                border-radius: 70px;
+            }
+            
+            p{
+                width: max-content;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                top: 125px;
+            }
+            
+            
+            #respuesta{
+                width: max-content;
+                text-align: center;
+                text-decoration: underline;
+                position: absolute;
+                left: 50%;
+                bottom: 280px;
+                padding: 20px;
+                background-color: rgb(238, 237, 174);
+                border-radius: 50px;
+                cursor: pointer;
+            }
+        }
+    
+        .puntero{
+            width: 30px;
+            height: auto;
+            display: block;
+            position: absolute;
+            left: 62%;
+            top: 600px;
+            -webkit-transform: rotate(90deg);
+            animation: slide 1s linear infinite;
+    
+            @keyframes slide {
+                from {
+                    left: 61.5%;
+                }
+                to{
+                    left: 62%;
+                }
+            }
+        }
+    
+    }
+    
+    #nombrePersonaje{
+        width: 200px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        left: 23%;
+        top: 600px;
+        padding: 10px;
+        background-color: rgb(184, 158, 112);
+        border-radius: 50px;
+        -webkit-transform: rotate(-5deg);
+    }
+
+
+@media screen and (max-width: 700px){
+
+    .error{ 
+        .dialogo{
+            h5{
+                width: 50%;
+                padding: 65px;
+                margin-left: 15%;
+            }
+            
+            p{
+                top: 140px;
+            }
+            
+            #respuesta{
+                padding: 10px;
+                left: 45%;
+            }
+        }
+    
+        .puntero{
+            left: 50%;
+            top: 610px;
+    
+            @keyframes slide {
+                from {
+                    left: 49.5%;
+                }
+                to{
+                    left: 50%;
+                }
+            }
+        }
+    
+    }
+    
+    #nombrePersonaje{
+        width: 120px;
+        left: 15%;
+        top: 630px;
+        -webkit-transform: rotate(-7deg);
+    }
+}

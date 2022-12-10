@@ -1,18 +1,17 @@
-@import url('https://fonts.google.com/specimen/Sura?query=sura');
-@import url('https://fonts.google.com/specimen/M+PLUS+Rounded+1c?query=rounded+');
-@import './bases';
-@import './layout';
+
+@import './bases/base';
+@import './bases/fuentes';
+@import './bases/tipografia';
+@import './bases/variables';
+@import './bases/layout';
 @import './tema/dia';
 @import './tema/noche';
-@import '../sass/components/buttons';
-@import './inicio';
-@import './sesion';
-@import './contacto';
-@import './listado';
-@import './producto';
-@import './usuario';
-@import './404';
-
-
-//*********************************//
+@import './components/buttons';
+@import './paginas/inicio';
+@import './paginas/sesion';
+@import './paginas/contacto';
+@import './paginas/listado';
+@import './paginas/producto';
+@import './paginas/usuario';
+@import './paginas/404';
 
