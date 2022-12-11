@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400&family=Sura&display=swap";
 * {
-  box-sizing: border- boss;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -203,7 +203,6 @@ a :visited {
 }
 
 .footerSesion__redes, .footer__redes {
-  display: absolute;
   cursor: pointer;
   place-items: center flex-start;
   margin-top: 25px;
@@ -213,7 +212,6 @@ a :visited {
 
 .footer__p {
   color: var(--color-fondo);
-  display: absolute;
   float: right;
   margin-top: 20px;
   margin-right: 25px;
@@ -923,7 +921,6 @@ button:hover {
   .caracteristicas {
     width: 80vw;
     margin: 120px;
-    padding: auto;
   }
 
   .caracteristicas1 {
@@ -1076,7 +1073,6 @@ button:hover {
 
   .caracteristicas {
     margin: 15vw;
-    padding: auto;
   }
 
   .caracteristicas__tipo {
