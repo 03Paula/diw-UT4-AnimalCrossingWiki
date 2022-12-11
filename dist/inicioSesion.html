@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html tema="dia">
+<html tema="claro">
     <head>
         <meta charset="UTF-8">
         <title>Inicio de Sesión</title>
@@ -10,9 +10,9 @@
     <body>
         <header>
             <section class="header">
-                <img class="logo" src="/logo.b96f1e41.webp" onclick="location.href='index.html'">
-                <section class="inicioSesion">
-                    <button type="button" class="dia/noche"><img src="/sol.8f3b848b.png"></button>
+                <img class="header__logo" src="/logo.b96f1e41.webp" onclick="location.href='index.html'">
+                <section class="header__inicioSesion">
+                    <button type="button" class="btn--diaNoche"><img src="/sol.8f3b848b.png"></button>
                 </section>
             </section>
         </header>
@@ -20,12 +20,12 @@
         <main>
 
             <section class="formulario">
-                <h2>Inicio de Sesión</h2>
+                <h2 class="formulario__h2">Inicio de Sesión</h2>
                 <form>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre de usuario" required="">
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required="">
-                    <p><a href="/registro.html">No estoy registrado</a></p>
-                    <button class="btn-medium-desktop" onclick="location.href='listado.html'">Iniciar Sesión</button>
+                    <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre de usuario" required="">
+                    <input class="formulario__input" type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required="">
+                    <p class="formulario__p"><a class="formulario__p" href="/registro.html">No estoy registrado</a></p>
+                    <button class="btn--mediumDesktop" onclick="location.href='listado.html'">Iniciar Sesión</button>
                 </form>
             </section>
 
@@ -35,14 +35,14 @@
         
         <footer>
             <section class="footerSesion">
-                <img class="redes" src="/twitter.a11dcc2c.png" onclick="location.href='https://twitter.com/'">
-                <img class="redes" src="/discord.69df23ff.png" onclick="location.href='https://discord.com/'">
-                <img class="redes" src="/instagram.5d9e842b.png" onclick="location.href='https://www.instagram.com/'">
-                <img class="redes" src="/facebook.6114df0a.png" onclick="location.href='https://es-es.facebook.com/'">
-                <p><a href="/contacto.html">Contáctanos</a></p>
+                <img class="footerSesion__redes" src="/twitter.a11dcc2c.png" onclick="location.href='https://twitter.com/'">
+                <img class="footerSesion__redes" src="/discord.69df23ff.png" onclick="location.href='https://discord.com/'">
+                <img class="footerSesion__redes" src="/instagram.5d9e842b.png" onclick="location.href='https://www.instagram.com/'">
+                <img class="footerSesion__redes" src="/facebook.6114df0a.png" onclick="location.href='https://es-es.facebook.com/'">
+                <p class="footer__p"><a href="/contacto.html">Contáctanos</a></p>
             </section>
             <section class="imagenBienvenida">
-                <img src="/Bienvenida.0abb8cc6.png" alt="Imagen de los sobrinos de Tom Nook">
+                <img class="imagenBienvenida__imagen" src="/Bienvenida.0abb8cc6.png" alt="Imagen de los sobrinos de Tom Nook">
             </section>
         </footer>
         

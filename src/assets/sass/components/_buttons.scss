@@ -1,12 +1,14 @@
 
-.btn-large-desktop{
+//Estilos para los distintos botones.
+
+.btn--largeDesktop{
     width: 30%;
     height: 50px;
     font-size: large;
     font-weight: bold;
 }
 
-.btn-medium-desktop{
+.btn--mediumDesktop{
     width: 170px;
     height: 50px;
     font-size: 1rem;
@@ -14,7 +16,7 @@
 
 }
 
-.btn-small{
+.btn--small{
     width: 122px;
     height: 44px;
     font-size: 1.5rem;

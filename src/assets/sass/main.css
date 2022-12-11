@@ -64,137 +64,163 @@ header {
   height: 100px;
   background-color: var(--color-secundario);
 }
-header .logo {
+
+.header__logo {
   width: 140px;
   height: auto;
   margin-left: 10px;
   cursor: pointer;
 }
-header .header {
+
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 }
-header .inicioSesion {
+
+.header__inicioSesion {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   margin: 15px;
 }
-header .headerbusqueda {
+.header__inicioSesion a {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Sura";
+  text-decoration: none;
+  margin-right: 5px;
+  color: var(--color-primario);
+}
+.header__inicioSesion a :visited {
+  text-decoration: none;
+}
+
+.headerbusqueda {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   margin: 15px;
 }
-header .headerbusqueda .busqueda {
+
+.btn__headerbusqueda {
   width: 40px;
   height: 40px;
   margin-right: 15px;
   margin-left: 10px;
   border-radius: 50%;
 }
-header .headerbusqueda .busqueda img {
+
+#header__busqueda__img {
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
-header .headerbusqueda input {
+
+#headerbusqueda--search {
   font-weight: 800;
   color: var(--color-primario);
   padding: 10px;
   background-color: transparent;
   border-radius: 20px;
 }
-header .headerbusqueda input:focus {
+#headerbusqueda--search:focus {
   outline: none;
 }
-header .headerbusqueda input::-moz-placeholder {
+#headerbusqueda--search::-moz-placeholder {
   font-size: 16px;
   font-weight: bolder;
   color: var(--color-primario);
 }
-header .headerbusqueda input:-ms-input-placeholder {
+#headerbusqueda--search:-ms-input-placeholder {
   font-size: 16px;
   font-weight: bolder;
   color: var(--color-primario);
 }
-header .headerbusqueda input::placeholder {
+#headerbusqueda--search::placeholder {
   font-size: 16px;
   font-weight: bolder;
   color: var(--color-primario);
 }
-header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+
+.headerbusqueda__img--favorito, .header--imagenredonda {
   margin-right: 5px;
   cursor: pointer;
 }
-header p {
+
+.headerbusqueda__p {
   font-size: 1em;
   font-weight: bold;
   font-family: "Sura";
-  color: var(--color-fondo);
+  color: var(--color-primario);
   margin-left: 5px;
   margin-right: 20px;
   cursor: pointer;
 }
-header a {
-  font-size: 1.5em;
-  font-weight: bold;
-  font-family: "Sura";
-  text-decoration: none;
-  color: var(--color-primario);
-}
-header a :visited {
-  text-decoration: none;
-}
 
 @media screen and (max-width: 768px) {
-  header .fav {
-    display: none;
-  }
-  header .corazon {
+  .headerbusqueda__img--favorito {
     margin-right: 10px;
   }
-  header input, header .favorito, header .busqueda {
+  #headerbusqueda--search, .headerbusqueda__favorito, .btn__headerbusqueda {
     display: none;
+  }
+  .btn--diaNoche {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 50%;
   }
 }
 footer {
   width: 100%;
   height: 80px;
-  position: static;
-  bottom: 0vh;
+  position: relative;
+  bottom: 0px;
   background-color: var(--color-secundario);
 }
-footer a {
+
+a {
   font-size: 1.5em;
   font-weight: bold;
   font-family: "Sura";
   text-decoration: none;
   color: var(--color-primario);
 }
-footer a :visited {
+a :visited {
   text-decoration: none;
 }
-footer .footer .redes, footer .footerSesion .redes {
+
+.footerSesion__redes, .footer__redes {
   display: absolute;
   justify-items: flex-start;
-  margin: 20px;
+  align-items: center;
+  margin-left: 20px;
   margin-right: 8px;
+  margin-top: 25px;
   cursor: pointer;
 }
-footer .footer p, footer .footerSesion p {
+
+.footer__p {
   font-size: 1rem;
   color: var(--color-fondo);
   display: absolute;
   float: right;
-  margin: 25px;
+  margin-right: 25px;
+  margin-top: 20px;
 }
-footer .footerSesion {
-  position: static;
-  bottom: 0vh;
+
+.footerSesion {
+  position: relative;
+  bottom: 0px;
   margin-top: 327px;
+}
+
+.imagenBienvenida {
+  position: relative;
+  bottom: 335px;
+  float: right;
 }
 
 .footerOceano {
@@ -203,7 +229,7 @@ footer .footerSesion {
   background-repeat: repeat-x;
 }
 
-[tema=dia] {
+[tema=claro] {
   --color-primario: #F2F6D0;
   --color-secundario: #6B8F71;
   --color-fondo: #FDFFEA;
@@ -217,7 +243,7 @@ footer .footerSesion {
   --fondo-usuario: url(/src/assets/img/leafpattern2.png);
 }
 
-[tema=noche] {
+[tema=oscuro] {
   --color-primario: #F2F6D0;
   --color-secundario: #3E5542;
   --color-fondo: #201F1F;
@@ -231,21 +257,21 @@ footer .footerSesion {
   --fondo-usuario: url(/src/assets/img/leafpattern2osc.png);
 }
 
-.btn-large-desktop {
+.btn--largeDesktop {
   width: 30%;
   height: 50px;
   font-size: large;
   font-weight: bold;
 }
 
-.btn-medium-desktop {
+.btn--mediumDesktop {
   width: 170px;
   height: 50px;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.btn-small {
+.btn--small {
   width: 122px;
   height: 44px;
   font-size: 1.5rem;
@@ -276,21 +302,21 @@ button:hover {
     display: flex;
     flex-flow: row;
   }
-  .inicio .imagen2 {
+  .inicio__imagen2 {
     width: 50%;
     height: 90vh;
     background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 20rem;
   }
-  .inicio .imagen2 img {
+  #inicio__imagen2--juego {
     width: 40vh;
     display: block;
     margin: auto;
     justify-content: center;
     margin-top: 20vh;
   }
-  .inicio .bienvenida {
+  .inicio__bienvenida {
     width: 50%;
     height: 90vh;
     display: flex;
@@ -300,28 +326,28 @@ button:hover {
     left: 50%;
     justify-content: space-evenly;
   }
-  .inicio .bienvenida h1 {
-    text-align: center;
-    margin-right: 50px;
-    margin-left: 50px;
-  }
-  .inicio .bienvenida p {
+  .inicio__bienvenida--p {
     font-size: 24px;
     text-align: center;
     margin-right: 50px;
     margin-left: 50px;
   }
-  .inicio .bienvenida .redesSociales {
+  #inicio__bienvenida--h1 {
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .inicio__redesSociales {
     display: block;
     position: absolute;
     bottom: 0px;
   }
-  .inicio .bienvenida .redesSociales .redes {
+  .inicio__redesSociale__redes {
     width: 3vh;
     padding: 5px;
     cursor: pointer;
   }
-  .personaje {
+  .inicio__personaje {
     width: 50%;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -334,7 +360,7 @@ button:hover {
     bottom: 0%;
     right: 10px;
   }
-  .personaje .personajes {
+  .personaje__personajes {
     width: 12vh;
     height: auto;
   }
@@ -343,60 +369,55 @@ button:hover {
   header a {
     font-size: 1.1em;
   }
-  header button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  .inicio .imagen2 {
+  .inicio__imagen2 {
     width: 100%;
     height: 50vh;
     background-image: var(--fondo-hojas);
     background-repeat: repeat;
     background-size: 40rem;
   }
-  .inicio .imagen2 img {
+  #inicio__imagen2--juego {
     width: 35vh;
     height: auto;
     display: block;
     margin: auto;
     padding-top: 55px;
   }
-  .inicio .bienvenida {
+  .inicio__bienvenida {
     text-align: center;
     display: inline;
     margin: 40px;
   }
-  .inicio .bienvenida button {
+  .inicio__bienvenida button {
     width: 300px;
     display: block;
     margin: auto;
     margin-top: 50px;
   }
-  .inicio .bienvenida p {
+  .inicio__bienvenida--p {
     font-size: 20px;
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
   }
-  .inicio .bienvenida .redesSociales {
+  .inicio__redesSociales {
     align-items: center;
     display: block;
     position: absolute;
     top: 58%;
     left: 30%;
   }
-  .inicio .bienvenida .redesSociales .redes {
+  .inicio__redesSociale__redes {
     padding: 10px;
     cursor: pointer;
   }
-  .inicio .personaje {
+  .inicio__personaje {
     display: inline-flex;
   }
-  .inicio .personaje #isabelle {
+  #personaje__personajes--isabelle {
     display: none;
   }
-  .inicio .personaje .personajes {
+  .personaje__personajes {
     width: 10vh;
     height: auto;
     position: fixed;
@@ -419,12 +440,14 @@ button:hover {
   background-size: 10rem;
   border-radius: 50px;
 }
-.formulario h2 {
+
+.formulario__h2 {
   color: var(--color-letra);
   display: block;
   margin: auto;
 }
-.formulario input {
+
+.formulario__input {
   width: 50%;
   height: 40px;
   display: block;
@@ -436,46 +459,44 @@ button:hover {
   border: none;
   border-radius: 10px;
 }
-.formulario input:last-of-type {
+.formulario__input:last-of-type {
   margin-bottom: 10px;
 }
-.formulario input::-moz-placeholder {
+.formulario__input::-moz-placeholder {
   font-size: calc(0.5em + 0.5vw);
   font-weight: 600;
   color: var(--color-letra-input);
 }
-.formulario input:-ms-input-placeholder {
+.formulario__input:-ms-input-placeholder {
   font-size: calc(0.5em + 0.5vw);
   font-weight: 600;
   color: var(--color-letra-input);
 }
-.formulario input::placeholder {
+.formulario__input::placeholder {
   font-size: calc(0.5em + 0.5vw);
   font-weight: 600;
   color: var(--color-letra-input);
 }
-.formulario a {
-  font-size: calc(0.6em + 0.3vw);
+
+.formulario__p {
+  font-size: calc(0.75em + 0.3vw);
   font-weight: bolder;
   text-decoration: none;
   color: var(--color-letra);
+  margin-bottom: 30px;
 }
-.formulario .btn-medium-desktop {
+
+.btn--mediumDesktop {
   margin-bottom: 20px;
   margin-top: 30px;
 }
 
-.imagenBienvenida {
-  position: absolute;
-  top: 650px;
-  right: 20px;
-}
-.imagenBienvenida img {
+.imagenBienvenida__imagen {
   width: 327px;
   height: auto;
 }
 
-.imagenRedonda {
+.header--imagenRedonda {
   width: 32px;
   height: 32px;
   border-radius: 150px;
@@ -487,7 +508,7 @@ button:hover {
     height: 90vh;
     display: flex;
   }
-  .contactanos .contactar1 {
+  .contactar1 {
     width: 50%;
     display: flex;
     flex-flow: column;
@@ -497,7 +518,7 @@ button:hover {
     background-repeat: repeat;
     background-size: 20rem;
   }
-  .contactanos .contactar1 h2 {
+  .contactar1__h2 {
     text-transform: uppercase;
     color: var(--color-primario);
     margin-top: 40px;
@@ -505,24 +526,24 @@ button:hover {
     background-color: var(--color-boton);
     border-radius: 70px 70px 100 100;
   }
-  .contactanos .contactar1 h6 {
+  .contactar1__h6 {
     text-align: left;
     color: var(--color-letra);
     margin-left: 50px;
     margin-right: 50px;
   }
-  .contactanos .contactar1 #mabel {
+  #contactar1__mabel {
     width: auto;
     height: 30vh;
     position: relative;
     bottom: 0px;
   }
-  .contactanos .contactar2 {
+  .contactar2 {
     width: 50%;
     margin-left: 80px;
-    padding-top: 9%;
+    padding-top: 10vh;
   }
-  .contactanos .contactar2 label {
+  .contactar2__label {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-letra);
@@ -530,7 +551,7 @@ button:hover {
     margin-bottom: 10px;
     margin-top: 10px;
   }
-  .contactanos .contactar2 input {
+  .contactar2__input {
     width: 60%;
     height: 30px;
     display: block;
@@ -539,7 +560,7 @@ button:hover {
     border-radius: 5px;
     border: none;
   }
-  .contactanos .contactar2 textarea {
+  .contactar2__textarea {
     width: 60%;
     height: 200px;
     display: block;
@@ -549,27 +570,27 @@ button:hover {
     border-radius: 5px;
     border: none;
   }
-  .contactanos .contactar2 textarea::-moz-placeholder {
+  .contactar2__textarea::-moz-placeholder {
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
   }
-  .contactanos .contactar2 textarea:-ms-input-placeholder {
+  .contactar2__textarea:-ms-input-placeholder {
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
   }
-  .contactanos .contactar2 textarea::placeholder {
+  .contactar2__textarea::placeholder {
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
   }
-  .contactanos .contactar2 .btn-small {
+  .btn--small {
     width: 150px;
     display: inline-block;
     margin-bottom: 20px;
   }
-  .contactanos .contactar2 .redesSociales {
+  .contactar2__redesSociales {
     position: fixed;
     bottom: 0;
     right: 50px;
@@ -584,13 +605,13 @@ button:hover {
     background-repeat: repeat;
     background-size: 40rem;
   }
-  .contactanos .contactar1 {
+  .contactar1 {
     text-align: center;
     display: block;
     padding: 20px;
     margin-bottom: 30px;
   }
-  .contactanos .contactar1 h2 {
+  .contactar1__h2 {
     text-transform: uppercase;
     color: var(--color-primario);
     margin-top: 20px;
@@ -599,21 +620,21 @@ button:hover {
     background-color: var(--color-boton);
     border-radius: 70px 70px 100 100;
   }
-  .contactanos .contactar1 img {
+  #contactar1__mabel {
     width: 20vh;
     height: auto;
     position: fixed;
     bottom: 0vh;
     right: 10px;
   }
-  .contactanos .contactar2 label {
+  .contactar2__label {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-letra);
     margin-top: 10px;
     margin-left: 20%;
   }
-  .contactanos .contactar2 input {
+  .contactar2__input {
     width: 60%;
     height: 30px;
     display: block;
@@ -623,7 +644,7 @@ button:hover {
     border-radius: 5px;
     border: none;
   }
-  .contactanos .contactar2 textarea {
+  .contactar2__textarea {
     width: 60%;
     height: 100px;
     display: block;
@@ -634,31 +655,32 @@ button:hover {
     border-radius: 5px;
     border: none;
   }
-  .contactanos .contactar2 textarea::-moz-placeholder {
+  .contactar2__textarea::-moz-placeholder {
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
   }
-  .contactanos .contactar2 textarea:-ms-input-placeholder {
+  .contactar2__textarea:-ms-input-placeholder {
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
   }
-  .contactanos .contactar2 textarea::placeholder {
+  .contactar2__textarea::placeholder {
     font-size: 16px;
     font-weight: 500;
     padding-left: 10px;
   }
-  .contactanos .contactar2 .btn-small {
+  .btn--small {
     margin-left: 20%;
   }
-  .contactanos .contactar2 .redesSociales {
+  .contactar2__redesSociales {
+    width: 100px;
     position: fixed;
     bottom: 0;
     left: 10px;
   }
-  .contactanos .contactar2 .redesSociales .redes {
-    width: 3vh;
+  .contactar2__redesSociales__redes {
+    width: 27px;
     margin: 5px;
     cursor: pointer;
   }
@@ -668,12 +690,14 @@ button:hover {
   right: 20px;
   top: 120px;
 }
-.filtrado label {
+
+.filtrado__label {
   font-size: 24px;
   font-weight: bold;
   color: var(--color-letra);
 }
-.filtrado select, .filtrado option {
+
+.filtrado__opciones, .filtrado__select {
   width: auto;
   height: 30px;
   font-size: 20px;
@@ -687,15 +711,18 @@ button:hover {
 .lista {
   display: flex;
 }
-.lista .peces, .lista .insectos, .lista .vecinos {
+
+.lista__peces, .lista__insectos, .lista__vecinos {
   width: 170px;
   height: 140px;
 }
-.lista .musica {
+
+.lista__musica {
   width: 170px;
   height: 170px;
 }
-.lista .col-0, .lista .col-1, .lista .col-2, .lista .col-3 {
+
+.lista__col-0, .lista__col-1, .lista__col-2, .lista__col-3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -707,29 +734,34 @@ button:hover {
   padding-top: 100px;
   margin-left: 20px;
 }
-.lista .col-0 #ciudad-animal, .lista .col-1 #ciudad-animal, .lista .col-2 #ciudad-animal, .lista .col-3 #ciudad-animal {
+
+#lista--ciudad-animal {
   width: 230px;
 }
-.lista .icono {
+
+.icono {
   width: 25px;
   margin-right: 10px;
 }
-.lista .info {
+
+.info {
+  font-size: 15px;
   margin-left: 10px;
   margin-bottom: 10px;
 }
-.lista button {
+
+.lista__boton {
   margin-left: 15%;
   margin-bottom: 100px;
 }
 
 @media screen and (max-width: 920px) {
-  .col-0:last-child, .col-1:last-child, .col-2:last-child, .col-3:last-child {
+  .lista__col-0:last-child, .lista__col-1:last-child, .lista__col-2:last-child, .lista__col-3:last-child {
     display: none;
   }
 }
 @media screen and (max-width: 700px) {
-  .col-0:nth-last-child(2), .col-1:nth-last-child(2), .col-2:nth-last-child(2), .col-3:nth-last-child(2) {
+  .lista__col-0:nth-last-child(2), .lista__col-1:nth-last-child(2), .lista__col-2:nth-last-child(2), .lista__col-3:nth-last-child(2) {
     display: none;
   }
 }
@@ -743,38 +775,46 @@ button:hover {
     border: 2px solid var(--color-letra-input);
     border-radius: 50px;
   }
-  .carta .informacion {
+  .informacion {
     display: flex;
   }
-  .carta .informacion .visual {
+  .informacio__visual {
     width: 340px;
     height: 550px;
     border: transparent;
-    border-right: 2px solid var(--color-letra-input);
   }
-  .carta .informacion .visual #pato-icono {
+  hr {
+    width: 500px;
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: 520px;
+    border: 1px solid var(--color-letra-input);
+    transform: rotate(90deg);
+  }
+  #informacion__visual--pato-icono {
     position: absolute;
     top: 280px;
     left: 140px;
   }
-  .carta .informacion .visual #fav-icono {
+  #informacion__visual--fav-icono {
     width: 40px;
     height: auto;
     position: absolute;
     top: 280px;
     left: 420px;
   }
-  .carta .informacion .visual #miranda {
+  #informacion__visual--miranda {
     width: 250px;
     margin: 40px;
     margin-top: 100px;
   }
-  .carta .informacion .informacion-1 {
+  .informacion-1 {
     width: 80%;
     float: right;
     margin-top: 120px;
   }
-  .carta .informacion .informacion-1 .info, .carta .informacion .informacion-1 .info-1, .carta .informacion .informacion-1 .info-2, .carta .informacion .informacion-1 .info-3 {
+  .info, .info-1, .info-2, .info-3 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -782,20 +822,26 @@ button:hover {
     margin: 20px;
     margin-bottom: 20px;
   }
-  .carta .informacion .informacion-1 .info #genero, .carta .informacion .informacion-1 .info-1 #genero, .carta .informacion .informacion-1 .info-2 #genero, .carta .informacion .informacion-1 .info-3 #genero {
+  #genero {
     width: 14px;
     margin-left: 5px;
   }
-  .carta .informacion .informacion-1 .info .lema, .carta .informacion .informacion-1 .info-1 .lema, .carta .informacion .informacion-1 .info-2 .lema, .carta .informacion .informacion-1 .info-3 .lema {
+  .lema {
     width: 40vw;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-letra-input);
+    border-radius: 20px;
   }
-  .carta .informacion .informacion-1 h1 {
+  .informacion__h1 {
     position: absolute;
     top: 260px;
     left: 50%;
     color: rgba(118, 103, 74, 0.7725490196);
   }
-  .carta .informacion .informacion-1 p {
+  .info__p {
     width: 150px;
     text-align: center;
     margin-bottom: 5px;
@@ -804,7 +850,7 @@ button:hover {
     border: 1px solid var(--color-letra-input);
     border-radius: 20px;
   }
-  .carta .informacion .informacion-1 .titulo {
+  .info__titulo {
     color: var(--color-letra);
   }
   .caracteristicas {
@@ -812,24 +858,27 @@ button:hover {
     margin: 120px;
     padding: auto;
   }
-  .caracteristicas h5, .caracteristicas p {
-    width: 700px;
+  .caracteristicas1 {
+    width: 750px;
+  }
+  .caracteristicas__tipo {
     margin-bottom: 10px;
   }
-  .caracteristicas img {
+  .caracteristicas__casa {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     float: right;
     margin-top: 100px;
+    margin-left: 10px;
   }
   .especie {
     margin: 120px;
   }
-  .especie h5 {
+  .especie__h5 {
     margin-bottom: 10px;
   }
-  .especie .scroll {
+  .scroll {
     line-height: 3em;
     display: flex;
     padding: 10px;
@@ -839,10 +888,10 @@ button:hover {
     -ms-scroll-snap-type: x proximity;
         scroll-snap-type: x proximity;
   }
-  .especie .scroll img {
+  .scroll__img {
     margin-right: 50px;
   }
-  .especie #volver {
+  #volver {
     position: absolute;
     left: 20px;
     cursor: pointer;
@@ -860,40 +909,48 @@ button:hover {
     border: 2px solid var(--color-letra-input);
     border-radius: 50px;
   }
-  .carta .informacion {
+  .informacion {
     display: flex;
   }
-  .carta .informacion .visual {
+  .informacio__visual {
     width: 72vw;
     height: 350px;
     border: transparent;
     border-bottom: 2px solid var(--color-letra-input);
   }
-  .carta .informacion .visual #pato-icono {
+  hr {
+    display: block;
+    margin: auto;
+    width: 70vw;
+    border: 1px solid var(--color-letra-input);
+  }
+  #informacion__visual--pato-icono {
     position: absolute;
     top: 240px;
     left: 15%;
   }
-  .carta .informacion .visual #fav-icono {
+  #informacion__visual--fav-icono {
     width: 40px;
     height: auto;
     position: absolute;
     top: 240px;
     left: 80%;
   }
-  .carta .informacion .visual #miranda {
+  #informacion__visual--miranda {
     width: 200px;
     display: block;
+    position: absolute;
+    left: 35%;
     margin: auto;
     margin-top: 25px;
   }
-  .carta .informacion .informacion-1 {
+  .informacion-1 {
     width: 40%;
     margin-top: 350px;
     position: absolute;
     left: 13vw;
   }
-  .carta .informacion .informacion-1 .info, .carta .informacion .informacion-1 .info-1, .carta .informacion .informacion-1 .info-2, .carta .informacion .informacion-1 .info-3 {
+  .info, .info-1, .info-2, .info-3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -902,18 +959,24 @@ button:hover {
     margin-bottom: 20px;
     margin-left: 13%;
   }
-  .carta .informacion .informacion-1 .info #genero, .carta .informacion .informacion-1 .info-1 #genero, .carta .informacion .informacion-1 .info-2 #genero, .carta .informacion .informacion-1 .info-3 #genero {
+  #genero {
     width: 14px;
     margin-left: 5px;
   }
-  .carta .informacion .informacion-1 .info .lema, .carta .informacion .informacion-1 .info-1 .lema, .carta .informacion .informacion-1 .info-2 .lema, .carta .informacion .informacion-1 .info-3 .lema {
+  .lema {
     width: 63vw;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-letra-input);
+    border-radius: 20px;
   }
-  .carta .informacion .informacion-1 h1 {
+  .informacion__h1 {
     margin-top: 20px;
     margin-left: 60%;
   }
-  .carta .informacion .informacion-1 p {
+  .info__p {
     width: 20vw;
     text-align: center;
     margin-bottom: 5px;
@@ -922,27 +985,27 @@ button:hover {
     border: 1px solid var(--color-letra-input);
     border-radius: 20px;
   }
-  .carta .informacion .informacion-1 .titulo {
+  .info__titulo {
     color: var(--color-letra);
   }
   .caracteristicas {
     margin: 15vw;
     padding: auto;
   }
-  .caracteristicas h5, .caracteristicas p {
+  .caracteristicas__tipo {
     width: 66vw;
     margin-bottom: 10px;
   }
-  .caracteristicas img {
+  .caracteristicas__casa {
     display: none;
   }
   .especie {
     margin: 15vw;
   }
-  .especie h5 {
+  .especie__h5 {
     margin-bottom: 10px;
   }
-  .especie .scroll {
+  .scroll {
     line-height: 3em;
     display: flex;
     padding: 10px;
@@ -952,11 +1015,11 @@ button:hover {
     -ms-scroll-snap-type: x proximity;
         scroll-snap-type: x proximity;
   }
-  .especie .scroll img {
+  .scroll__img {
     width: 30vw;
     margin-right: 4vw;
   }
-  .especie #volver {
+  #volver {
     position: absolute;
     left: 20px;
     cursor: pointer;
@@ -972,7 +1035,8 @@ button:hover {
   background-size: 70rem;
   border-radius: 40px;
 }
-.usuario .imagen-usuario {
+
+.imagen-usuario {
   height: 400px;
   display: flex;
   flex-direction: row;
@@ -981,25 +1045,23 @@ button:hover {
   margin-top: 40px;
   border-bottom: 2px solid var(--color-letra);
 }
-.usuario .imagen-usuario button {
+
+.btn--mediumDesktop--usuario {
   position: absolute;
-  top: 470px;
+  top: 450px;
   left: 25%;
 }
-.usuario hr {
-  width: 70%;
-  display: block;
-  margin: auto;
-  margin-top: 100px;
-}
-.usuario .info-usuario {
+
+.info-usuario {
   margin: 40px;
 }
-.usuario .info-usuario h5 {
+
+.info-usuario__h5 {
   margin-left: 10%;
   margin-bottom: 10px;
 }
-.usuario .info-usuario button {
+
+.btn--mediumDesktop--info {
   display: block;
   margin: auto;
   position: relative;
@@ -1010,14 +1072,19 @@ button:hover {
   margin: 40px;
   margin-left: 10%;
 }
-.mostrar-favorito .lista img {
+
+.mostrar__lista {
+  display: flex;
+}
+
+.mostrar__lista__vecinos {
   width: 150px;
   height: auto;
   margin: 20px;
   cursor: pointer;
 }
 
-.logotipo img {
+.logotipo--logo {
   width: 210;
   height: auto;
   margin: 10px;
@@ -1058,19 +1125,21 @@ button:hover {
     transform: translateX(0);
   }
 }
-.error img {
+.error--tom {
   width: 250px;
   height: auto;
   display: block;
   margin: auto;
 }
-.error .dialogo {
+
+.dialogo {
   width: 90vw;
   height: 300px;
   position: absolute;
   top: 640px;
 }
-.error .dialogo h5 {
+
+.dialogo--h5 {
   width: 60%;
   height: 40px;
   text-align: center;
@@ -1081,30 +1150,34 @@ button:hover {
   background-color: var(--color-primario);
   border-radius: 70px;
 }
-.error .dialogo p {
+
+#dialogo--error {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
+  color: var(--color-letra-input);
   position: absolute;
   left: 50%;
   top: 125px;
 }
-.error .dialogo #respuesta {
+
+#dialogo--respuesta {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
   text-decoration: underline;
   position: absolute;
-  left: 50%;
+  left: 70%;
   bottom: 280px;
   padding: 20px;
   background-color: rgb(238, 237, 174);
   border-radius: 50px;
   cursor: pointer;
 }
-.error .puntero {
+
+.error__puntero {
   width: 30px;
   height: auto;
   display: block;
@@ -1146,19 +1219,19 @@ button:hover {
 }
 
 @media screen and (max-width: 700px) {
-  .error .dialogo h5 {
+  .dialogo--h5 {
     width: 50%;
     padding: 65px;
     margin-left: 15%;
   }
-  .error .dialogo p {
+  .dialogo--error {
     top: 140px;
   }
-  .error .dialogo #respuesta {
+  #dialogo--respuesta {
     padding: 10px;
-    left: 45%;
+    left: 60%;
   }
-  .error .puntero {
+  .error__puntero {
     left: 50%;
     top: 610px;
   }
@@ -1179,7 +1252,9 @@ button:hover {
     }
   }
   #nombrePersonaje {
-    width: 120px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     left: 15%;
     top: 630px;
     -webkit-transform: rotate(-7deg);

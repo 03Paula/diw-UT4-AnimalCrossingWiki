@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html tema="dia">
+<html tema="claro">
     <head>
         <meta charset="UTF-8">
         <title>Contáctanos</title>
@@ -11,48 +11,48 @@
         <main>
         <header>
             <section class="header">
-                <img class="logo" src="assets/img/logo.webp" onclick="location.href='index.html'">
+                <img class="header__logo" src="assets/img/logo.webp" onclick="location.href='index.html'">
                 <section class="headerbusqueda">
-                    <input  id="search" type="search" placeholder="buscar...">
-                    <button class="busqueda"><img src="assets/img/Vector.png"></button>
-                    <img src="assets/img/corazon.png" class="img-favorito">
-                    <p class="favorito">Favoritos</p>
-                    <img src="assets/img/Resetti.png" class="imagenRedonda" onclick="location.href='usuario.html'">
-                    <p onclick="location.href='usuario.html'">Usuario1</p>
-                    <button type="button" class="dia/noche"><img src="assets/img/sol.png" class="imagenTema" ></button>
+                    <input  id="headerbusqueda--search" type="search" placeholder="buscar...">
+                    <button class="btn__headerbusqueda"><img id="header__busqueda__img" src="assets/img/Vector.png"></button>
+                    <img src="assets/img/corazon.png" class="headerbusqueda__img--favorito">
+                    <p class="headerbusqueda__p headerbusqueda__favorito">Favoritos</p>
+                    <img src="assets/img/Resetti.png" class="header--imagenRedonda" onclick="location.href='usuario.html'">
+                    <p class="headerbusqueda__p" onclick="location.href='usuario.html'">Usuario1</p>
+                    <button type="button" class="btn--diaNoche"><img src="assets/img/sol.png" class="imagenTema" ></button>
                 </section>
             </section>
         </header>
         
         <section class="contactanos">
             <article class="contactar1">
-                <h2>Contáctanos</h2>
+                <h2 class="contactar1__h2">Contáctanos</h2>
                 
-                <h6>Si tienes alguna duda, comentario o 
+                <h6 class="contactar1__h6">Si tienes alguna duda, comentario o 
                     sugerencia, puedes contactarnos y
                     nos comunicaremos contigo lo
                     antes posible.
                 </h6>
-                <img id="mabel" src="assets/img/Mabel_NH.webp">
+                <img id="contactar1__mabel" src="assets/img/Mabel_NH.webp">
             </article>
             
             <article class="contactar2">
                 <form>
-                    <label for="Nombre">Nombre Completo</label>
-                    <input type="text" name="Nombre" id="Nombre" required>
-                    <label for="Email">Email</label>
-                    <input type="email" name="Email" id="Email" required>
-                    <label for="Comentarios">Comentarios</label>
-                    <textarea name="Comentarios" id="Comentarios" placeholder="Escriba su comentario..." required >
+                    <label class="contactar2__label" for="Nombre">Nombre Completo</label>
+                    <input class="contactar2__input" type="text" name="Nombre" id="Nombre" required>
+                    <label class="contactar2__label" for="Email">Email</label>
+                    <input class="contactar2__input" type="email" name="Email" id="Email" required>
+                    <label class="contactar2__label" for="Comentarios">Comentarios</label>
+                    <textarea class="contactar2__textarea" name="Comentarios" id="Comentarios" placeholder="Escriba su comentario..." required >
                     </textarea>
-                    <button class="btn-small">Enviar</button>
+                    <button class="btn--small">Enviar</button>
                 </form>
                 
-                <article class="redesSociales">
-                    <img class="redes" src="assets/img/twitter.png" onclick="location.href='https://twitter.com/'">
-                    <img class="redes" src="assets/img/discord.png" onclick="location.href='https://discord.com/'">
-                    <img class="redes" src="assets/img/instagram.png" onclick="location.href='https://www.instagram.com/'">
-                    <img class="redes" src="assets/img/facebook.png" onclick="location.href='https://es-es.facebook.com/'">
+                <article class="contactar2__redesSociales">
+                    <img class="contactar2__redesSociales__redes" src="assets/img/twitter.png" onclick="location.href='https://twitter.com/'">
+                    <img class="contactar2__redesSociales__redes" src="assets/img/discord.png" onclick="location.href='https://discord.com/'">
+                    <img class="contactar2__redesSociales__redes" src="assets/img/instagram.png" onclick="location.href='https://www.instagram.com/'">
+                    <img class="contactar2__redesSociales__redes" src="assets/img/facebook.png" onclick="location.href='https://es-es.facebook.com/'">
                 </article>
             </article>
             

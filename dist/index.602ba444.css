@@ -65,28 +65,48 @@ header {
   background-color: var(--color-secundario);
 }
 
-header .logo {
+.header__logo {
   width: 140px;
   height: auto;
   cursor: pointer;
   margin-left: 10px;
 }
 
-header .header {
+.header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   display: flex;
 }
 
-header .inicioSesion, header .headerbusqueda {
+.header__inicioSesion {
   flex-direction: row;
   align-items: flex-end;
   margin: 15px;
   display: flex;
 }
 
-header .headerbusqueda .busqueda {
+.header__inicioSesion a {
+  color: var(--color-primario);
+  margin-right: 5px;
+  font-family: Sura;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header__inicioSesion a :visited {
+  text-decoration: none;
+}
+
+.headerbusqueda {
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 15px;
+  display: flex;
+}
+
+.btn__headerbusqueda {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -94,13 +114,13 @@ header .headerbusqueda .busqueda {
   margin-right: 15px;
 }
 
-header .headerbusqueda .busqueda img {
+#header__busqueda__img {
   width: 32px;
   height: 32px;
   cursor: pointer;
 }
 
-header .headerbusqueda input {
+#headerbusqueda--search {
   color: var(--color-primario);
   background-color: #0000;
   border-radius: 20px;
@@ -108,35 +128,35 @@ header .headerbusqueda input {
   font-weight: 800;
 }
 
-header .headerbusqueda input:focus {
+#headerbusqueda--search:focus {
   outline: none;
 }
 
-header .headerbusqueda input::-moz-placeholder {
+#headerbusqueda--search::-moz-placeholder {
   color: var(--color-primario);
   font-size: 16px;
   font-weight: bolder;
 }
 
-header .headerbusqueda input:-ms-input-placeholder {
+#headerbusqueda--search:-ms-input-placeholder {
   color: var(--color-primario);
   font-size: 16px;
   font-weight: bolder;
 }
 
-header .headerbusqueda input::placeholder {
+#headerbusqueda--search::placeholder {
   color: var(--color-primario);
   font-size: 16px;
   font-weight: bolder;
 }
 
-header .headerbusqueda .img-favorito, header .headerbusqueda .imagenredonda {
+.headerbusqueda__img--favorito, .header--imagenredonda {
   cursor: pointer;
   margin-right: 5px;
 }
 
-header p {
-  color: var(--color-fondo);
+.headerbusqueda__p {
+  color: var(--color-primario);
   cursor: pointer;
   margin-left: 5px;
   margin-right: 20px;
@@ -145,29 +165,20 @@ header p {
   font-weight: bold;
 }
 
-header a {
-  color: var(--color-primario);
-  font-family: Sura;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-header a :visited {
-  text-decoration: none;
-}
-
 @media screen and (max-width: 768px) {
-  header .fav {
-    display: none;
-  }
-
-  header .corazon {
+  .headerbusqueda__img--favorito {
     margin-right: 10px;
   }
 
-  header input, header .favorito, header .busqueda {
+  #headerbusqueda--search, .headerbusqueda__favorito, .btn__headerbusqueda {
     display: none;
+  }
+
+  .btn--diaNoche {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
   }
 }
 
@@ -175,11 +186,11 @@ footer {
   width: 100%;
   height: 80px;
   background-color: var(--color-secundario);
-  position: static;
+  position: relative;
   bottom: 0;
 }
 
-footer a {
+a {
   color: var(--color-primario);
   font-family: Sura;
   font-size: 1.5em;
@@ -187,29 +198,38 @@ footer a {
   text-decoration: none;
 }
 
-footer a :visited {
+a :visited {
   text-decoration: none;
 }
 
-footer .footer .redes, footer .footerSesion .redes {
+.footerSesion__redes, .footer__redes {
   display: absolute;
   cursor: pointer;
-  justify-items: flex-start;
-  margin: 20px 8px 20px 20px;
+  place-items: center flex-start;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 8px;
 }
 
-footer .footer p, footer .footerSesion p {
+.footer__p {
   color: var(--color-fondo);
   display: absolute;
   float: right;
-  margin: 25px;
+  margin-top: 20px;
+  margin-right: 25px;
   font-size: 1rem;
 }
 
-footer .footerSesion {
+.footerSesion {
   margin-top: 327px;
-  position: static;
+  position: relative;
   bottom: 0;
+}
+
+.imagenBienvenida {
+  float: right;
+  position: relative;
+  bottom: 335px;
 }
 
 .footerOceano {
@@ -218,7 +238,7 @@ footer .footerSesion {
   background-repeat: repeat-x;
 }
 
-[tema="dia"] {
+[tema="claro"] {
   --color-primario: #f2f6d0;
   --color-secundario: #6b8f71;
   --color-fondo: #fdffea;
@@ -232,7 +252,7 @@ footer .footerSesion {
   --fondo-usuario: url("leafpattern2.7cf8d127.png");
 }
 
-[tema="noche"] {
+[tema="oscuro"] {
   --color-primario: #f2f6d0;
   --color-secundario: #3e5542;
   --color-fondo: #201f1f;
@@ -246,21 +266,21 @@ footer .footerSesion {
   --fondo-usuario: url("leafpattern2osc.3a27cef9.png");
 }
 
-.btn-large-desktop {
+.btn--largeDesktop {
   width: 30%;
   height: 50px;
   font-size: large;
   font-weight: bold;
 }
 
-.btn-medium-desktop {
+.btn--mediumDesktop {
   width: 170px;
   height: 50px;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.btn-small {
+.btn--small {
   width: 122px;
   height: 44px;
   font-size: 1.5rem;
@@ -292,7 +312,7 @@ button:hover {
     display: flex;
   }
 
-  .inicio .imagen2 {
+  .inicio__imagen2 {
     width: 50%;
     height: 90vh;
     background-image: var(--fondo-hojas);
@@ -300,14 +320,14 @@ button:hover {
     background-size: 20rem;
   }
 
-  .inicio .imagen2 img {
+  #inicio__imagen2--juego {
     width: 40vh;
     justify-content: center;
     margin: 20vh auto auto;
     display: block;
   }
 
-  .inicio .bienvenida {
+  .inicio__bienvenida {
     width: 50%;
     height: 90vh;
     flex-flow: column;
@@ -318,32 +338,32 @@ button:hover {
     left: 50%;
   }
 
-  .inicio .bienvenida h1 {
-    text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  .inicio .bienvenida p {
+  .inicio__bienvenida--p {
     text-align: center;
     margin-left: 50px;
     margin-right: 50px;
     font-size: 24px;
   }
 
-  .inicio .bienvenida .redesSociales {
+  #inicio__bienvenida--h1 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .inicio__redesSociales {
     display: block;
     position: absolute;
     bottom: 0;
   }
 
-  .inicio .bienvenida .redesSociales .redes {
+  .inicio__redesSociale__redes {
     width: 3vh;
     cursor: pointer;
     padding: 5px;
   }
 
-  .personaje {
+  .inicio__personaje {
     width: 50%;
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -357,7 +377,7 @@ button:hover {
     right: 10px;
   }
 
-  .personaje .personajes {
+  .personaje__personajes {
     width: 12vh;
     height: auto;
   }
@@ -368,13 +388,7 @@ button:hover {
     font-size: 1.1em;
   }
 
-  header button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  .inicio .imagen2 {
+  .inicio__imagen2 {
     width: 100%;
     height: 50vh;
     background-image: var(--fondo-hojas);
@@ -382,7 +396,7 @@ button:hover {
     background-size: 40rem;
   }
 
-  .inicio .imagen2 img {
+  #inicio__imagen2--juego {
     width: 35vh;
     height: auto;
     margin: auto;
@@ -390,26 +404,26 @@ button:hover {
     display: block;
   }
 
-  .inicio .bienvenida {
+  .inicio__bienvenida {
     text-align: center;
     margin: 40px;
     display: inline;
   }
 
-  .inicio .bienvenida button {
+  .inicio__bienvenida button {
     width: 300px;
     margin: 50px auto auto;
     display: block;
   }
 
-  .inicio .bienvenida p {
+  .inicio__bienvenida--p {
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 20px;
   }
 
-  .inicio .bienvenida .redesSociales {
+  .inicio__redesSociales {
     align-items: center;
     display: block;
     position: absolute;
@@ -417,20 +431,20 @@ button:hover {
     left: 30%;
   }
 
-  .inicio .bienvenida .redesSociales .redes {
+  .inicio__redesSociale__redes {
     cursor: pointer;
     padding: 10px;
   }
 
-  .inicio .personaje {
+  .inicio__personaje {
     display: inline-flex;
   }
 
-  .inicio .personaje #isabelle {
+  #personaje__personajes--isabelle {
     display: none;
   }
 
-  .inicio .personaje .personajes {
+  .personaje__personajes {
     width: 10vh;
     height: auto;
     position: fixed;
@@ -453,13 +467,13 @@ button:hover {
   padding: 20px;
 }
 
-.formulario h2 {
+.formulario__h2 {
   color: var(--color-letra);
   margin: auto;
   display: block;
 }
 
-.formulario input {
+.formulario__input {
   width: 50%;
   height: 40px;
   background-color: var(--color-input);
@@ -470,52 +484,47 @@ button:hover {
   display: block;
 }
 
-.formulario input:last-of-type {
+.formulario__input:last-of-type {
   margin-bottom: 10px;
 }
 
-.formulario input::-moz-placeholder {
+.formulario__input::-moz-placeholder {
   color: var(--color-letra-input);
   font-size: calc(.5em + .5vw);
   font-weight: 600;
 }
 
-.formulario input:-ms-input-placeholder {
+.formulario__input:-ms-input-placeholder {
   color: var(--color-letra-input);
   font-size: calc(.5em + .5vw);
   font-weight: 600;
 }
 
-.formulario input::placeholder {
+.formulario__input::placeholder {
   color: var(--color-letra-input);
   font-size: calc(.5em + .5vw);
   font-weight: 600;
 }
 
-.formulario a {
+.formulario__p {
   color: var(--color-letra);
-  font-size: calc(.6em + .3vw);
+  margin-bottom: 30px;
+  font-size: calc(.75em + .3vw);
   font-weight: bolder;
   text-decoration: none;
 }
 
-.formulario .btn-medium-desktop {
+.btn--mediumDesktop {
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
-.imagenBienvenida {
-  position: absolute;
-  top: 650px;
-  right: 20px;
-}
-
-.imagenBienvenida img {
+.imagenBienvenida__imagen {
   width: 327px;
   height: auto;
 }
 
-.imagenRedonda {
+.header--imagenRedonda {
   width: 32px;
   height: 32px;
   border-radius: 150px;
@@ -528,7 +537,7 @@ button:hover {
     display: flex;
   }
 
-  .contactanos .contactar1 {
+  .contactar1 {
     width: 50%;
     background-image: var(--fondo-hojas);
     background-repeat: repeat;
@@ -539,7 +548,7 @@ button:hover {
     display: flex;
   }
 
-  .contactanos .contactar1 h2 {
+  .contactar1__h2 {
     text-transform: uppercase;
     color: var(--color-primario);
     background-color: var(--color-boton);
@@ -548,27 +557,27 @@ button:hover {
     padding: 20px;
   }
 
-  .contactanos .contactar1 h6 {
+  .contactar1__h6 {
     text-align: left;
     color: var(--color-letra);
     margin-left: 50px;
     margin-right: 50px;
   }
 
-  .contactanos .contactar1 #mabel {
+  #contactar1__mabel {
     width: auto;
     height: 30vh;
     position: relative;
     bottom: 0;
   }
 
-  .contactanos .contactar2 {
+  .contactar2 {
     width: 50%;
     margin-left: 80px;
-    padding-top: 9%;
+    padding-top: 10vh;
   }
 
-  .contactanos .contactar2 label {
+  .contactar2__label {
     color: var(--color-letra);
     margin-top: 10px;
     margin-bottom: 10px;
@@ -577,7 +586,7 @@ button:hover {
     display: block;
   }
 
-  .contactanos .contactar2 input {
+  .contactar2__input {
     width: 60%;
     height: 30px;
     background-color: var(--color-input);
@@ -587,7 +596,7 @@ button:hover {
     display: block;
   }
 
-  .contactanos .contactar2 textarea {
+  .contactar2__textarea {
     width: 60%;
     height: 200px;
     background-color: var(--color-input);
@@ -598,31 +607,31 @@ button:hover {
     display: block;
   }
 
-  .contactanos .contactar2 textarea::-moz-placeholder {
+  .contactar2__textarea::-moz-placeholder {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
   }
 
-  .contactanos .contactar2 textarea:-ms-input-placeholder {
+  .contactar2__textarea:-ms-input-placeholder {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
   }
 
-  .contactanos .contactar2 textarea::placeholder {
+  .contactar2__textarea::placeholder {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
   }
 
-  .contactanos .contactar2 .btn-small {
+  .btn--small {
     width: 150px;
     margin-bottom: 20px;
     display: inline-block;
   }
 
-  .contactanos .contactar2 .redesSociales {
+  .contactar2__redesSociales {
     cursor: pointer;
     position: fixed;
     bottom: 0;
@@ -639,14 +648,14 @@ button:hover {
     background-size: 40rem;
   }
 
-  .contactanos .contactar1 {
+  .contactar1 {
     text-align: center;
     margin-bottom: 30px;
     padding: 20px;
     display: block;
   }
 
-  .contactanos .contactar1 h2 {
+  .contactar1__h2 {
     text-transform: uppercase;
     color: var(--color-primario);
     background-color: var(--color-boton);
@@ -656,7 +665,7 @@ button:hover {
     padding: 20px;
   }
 
-  .contactanos .contactar1 img {
+  #contactar1__mabel {
     width: 20vh;
     height: auto;
     position: fixed;
@@ -664,7 +673,7 @@ button:hover {
     right: 10px;
   }
 
-  .contactanos .contactar2 label {
+  .contactar2__label {
     color: var(--color-letra);
     margin-top: 10px;
     margin-left: 20%;
@@ -672,7 +681,7 @@ button:hover {
     font-weight: bold;
   }
 
-  .contactanos .contactar2 input {
+  .contactar2__input {
     width: 60%;
     height: 30px;
     background-color: var(--color-input);
@@ -683,7 +692,7 @@ button:hover {
     display: block;
   }
 
-  .contactanos .contactar2 textarea {
+  .contactar2__textarea {
     width: 60%;
     height: 100px;
     background-color: var(--color-input);
@@ -695,36 +704,37 @@ button:hover {
     display: block;
   }
 
-  .contactanos .contactar2 textarea::-moz-placeholder {
+  .contactar2__textarea::-moz-placeholder {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
   }
 
-  .contactanos .contactar2 textarea:-ms-input-placeholder {
+  .contactar2__textarea:-ms-input-placeholder {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
   }
 
-  .contactanos .contactar2 textarea::placeholder {
+  .contactar2__textarea::placeholder {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 500;
   }
 
-  .contactanos .contactar2 .btn-small {
+  .btn--small {
     margin-left: 20%;
   }
 
-  .contactanos .contactar2 .redesSociales {
+  .contactar2__redesSociales {
+    width: 100px;
     position: fixed;
     bottom: 0;
     left: 10px;
   }
 
-  .contactanos .contactar2 .redesSociales .redes {
-    width: 3vh;
+  .contactar2__redesSociales__redes {
+    width: 27px;
     cursor: pointer;
     margin: 5px;
   }
@@ -736,13 +746,13 @@ button:hover {
   right: 20px;
 }
 
-.filtrado label {
+.filtrado__label {
   color: var(--color-letra);
   font-size: 24px;
   font-weight: bold;
 }
 
-.filtrado select, .filtrado option {
+.filtrado__opciones, .filtrado__select {
   width: auto;
   height: 30px;
   text-align: center;
@@ -757,17 +767,17 @@ button:hover {
   display: flex;
 }
 
-.lista .peces, .lista .insectos, .lista .vecinos {
+.lista__peces, .lista__insectos, .lista__vecinos {
   width: 170px;
   height: 140px;
 }
 
-.lista .musica {
+.lista__musica {
   width: 170px;
   height: 170px;
 }
 
-.lista .col-0, .lista .col-1, .lista .col-2, .lista .col-3 {
+.lista__col-0, .lista__col-1, .lista__col-2, .lista__col-3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -778,33 +788,34 @@ button:hover {
   display: block;
 }
 
-.lista .col-0 #ciudad-animal, .lista .col-1 #ciudad-animal, .lista .col-2 #ciudad-animal, .lista .col-3 #ciudad-animal {
+#lista--ciudad-animal {
   width: 230px;
 }
 
-.lista .icono {
+.icono {
   width: 25px;
   margin-right: 10px;
 }
 
-.lista .info {
+.info {
   margin-bottom: 10px;
   margin-left: 10px;
+  font-size: 15px;
 }
 
-.lista button {
+.lista__boton {
   margin-bottom: 100px;
   margin-left: 15%;
 }
 
 @media screen and (max-width: 920px) {
-  .col-0:last-child, .col-1:last-child, .col-2:last-child, .col-3:last-child {
+  .lista__col-0:last-child, .lista__col-1:last-child, .lista__col-2:last-child, .lista__col-3:last-child {
     display: none;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .col-0:nth-last-child(2), .col-1:nth-last-child(2), .col-2:nth-last-child(2), .col-3:nth-last-child(2) {
+  .lista__col-0:nth-last-child(2), .lista__col-1:nth-last-child(2), .lista__col-2:nth-last-child(2), .lista__col-3:nth-last-child(2) {
     display: none;
   }
 }
@@ -820,24 +831,33 @@ button:hover {
     padding: 30px;
   }
 
-  .carta .informacion {
+  .informacion {
     display: flex;
   }
 
-  .carta .informacion .visual {
+  .informacio__visual {
     width: 340px;
     height: 550px;
     border: #0000;
-    border-right: 2px solid var(--color-letra-input);
   }
 
-  .carta .informacion .visual #pato-icono {
+  hr {
+    width: 500px;
+    border: 1px solid var(--color-letra-input);
+    display: block;
+    position: absolute;
+    top: 520px;
+    left: 20%;
+    transform: rotate(90deg);
+  }
+
+  #informacion__visual--pato-icono {
     position: absolute;
     top: 280px;
     left: 140px;
   }
 
-  .carta .informacion .visual #fav-icono {
+  #informacion__visual--fav-icono {
     width: 40px;
     height: auto;
     position: absolute;
@@ -845,18 +865,18 @@ button:hover {
     left: 420px;
   }
 
-  .carta .informacion .visual #miranda {
+  #informacion__visual--miranda {
     width: 250px;
     margin: 100px 40px 40px;
   }
 
-  .carta .informacion .informacion-1 {
+  .informacion-1 {
     width: 80%;
     float: right;
     margin-top: 120px;
   }
 
-  .carta .informacion .informacion-1 .info, .carta .informacion .informacion-1 .info-1, .carta .informacion .informacion-1 .info-2, .carta .informacion .informacion-1 .info-3 {
+  .info, .info-1, .info-2, .info-3 {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -864,23 +884,29 @@ button:hover {
     display: flex;
   }
 
-  .carta .informacion .informacion-1 .info #genero, .carta .informacion .informacion-1 .info-1 #genero, .carta .informacion .informacion-1 .info-2 #genero, .carta .informacion .informacion-1 .info-3 #genero {
+  #genero {
     width: 14px;
     margin-left: 5px;
   }
 
-  .carta .informacion .informacion-1 .info .lema, .carta .informacion .informacion-1 .info-1 .lema, .carta .informacion .informacion-1 .info-2 .lema, .carta .informacion .informacion-1 .info-3 .lema {
+  .lema {
     width: 40vw;
+    text-align: center;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-letra-input);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
   }
 
-  .carta .informacion .informacion-1 h1 {
+  .informacion__h1 {
     color: #76674ac5;
     position: absolute;
     top: 260px;
     left: 50%;
   }
 
-  .carta .informacion .informacion-1 p {
+  .info__p {
     width: 150px;
     text-align: center;
     background-color: var(--color-fondo);
@@ -890,7 +916,7 @@ button:hover {
     padding: 5px;
   }
 
-  .carta .informacion .informacion-1 .titulo {
+  .info__titulo {
     color: var(--color-letra);
   }
 
@@ -900,28 +926,32 @@ button:hover {
     padding: auto;
   }
 
-  .caracteristicas h5, .caracteristicas p {
-    width: 700px;
+  .caracteristicas1 {
+    width: 750px;
+  }
+
+  .caracteristicas__tipo {
     margin-bottom: 10px;
   }
 
-  .caracteristicas img {
+  .caracteristicas__casa {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     float: right;
     margin-top: 100px;
+    margin-left: 10px;
   }
 
   .especie {
     margin: 120px;
   }
 
-  .especie h5 {
+  .especie__h5 {
     margin-bottom: 10px;
   }
 
-  .especie .scroll {
+  .scroll {
     overscroll-behavior-x: contain;
     -ms-scroll-snap-type: x proximity;
     scroll-snap-type: x proximity;
@@ -932,11 +962,11 @@ button:hover {
     overflow-x: scroll;
   }
 
-  .especie .scroll img {
+  .scroll__img {
     margin-right: 50px;
   }
 
-  .especie #volver {
+  #volver {
     cursor: pointer;
     position: absolute;
     left: 20px;
@@ -955,24 +985,31 @@ button:hover {
     display: block;
   }
 
-  .carta .informacion {
+  .informacion {
     display: flex;
   }
 
-  .carta .informacion .visual {
+  .informacio__visual {
     width: 72vw;
     height: 350px;
     border: #0000;
     border-bottom: 2px solid var(--color-letra-input);
   }
 
-  .carta .informacion .visual #pato-icono {
+  hr {
+    width: 70vw;
+    border: 1px solid var(--color-letra-input);
+    margin: auto;
+    display: block;
+  }
+
+  #informacion__visual--pato-icono {
     position: absolute;
     top: 240px;
     left: 15%;
   }
 
-  .carta .informacion .visual #fav-icono {
+  #informacion__visual--fav-icono {
     width: 40px;
     height: auto;
     position: absolute;
@@ -980,20 +1017,22 @@ button:hover {
     left: 80%;
   }
 
-  .carta .informacion .visual #miranda {
+  #informacion__visual--miranda {
     width: 200px;
     margin: 25px auto auto;
     display: block;
+    position: absolute;
+    left: 35%;
   }
 
-  .carta .informacion .informacion-1 {
+  .informacion-1 {
     width: 40%;
     margin-top: 350px;
     position: absolute;
     left: 13vw;
   }
 
-  .carta .informacion .informacion-1 .info, .carta .informacion .informacion-1 .info-1, .carta .informacion .informacion-1 .info-2, .carta .informacion .informacion-1 .info-3 {
+  .info, .info-1, .info-2, .info-3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -1001,21 +1040,27 @@ button:hover {
     display: flex;
   }
 
-  .carta .informacion .informacion-1 .info #genero, .carta .informacion .informacion-1 .info-1 #genero, .carta .informacion .informacion-1 .info-2 #genero, .carta .informacion .informacion-1 .info-3 #genero {
+  #genero {
     width: 14px;
     margin-left: 5px;
   }
 
-  .carta .informacion .informacion-1 .info .lema, .carta .informacion .informacion-1 .info-1 .lema, .carta .informacion .informacion-1 .info-2 .lema, .carta .informacion .informacion-1 .info-3 .lema {
+  .lema {
     width: 63vw;
+    text-align: center;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-letra-input);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
   }
 
-  .carta .informacion .informacion-1 h1 {
+  .informacion__h1 {
     margin-top: 20px;
     margin-left: 60%;
   }
 
-  .carta .informacion .informacion-1 p {
+  .info__p {
     width: 20vw;
     text-align: center;
     background-color: var(--color-fondo);
@@ -1025,7 +1070,7 @@ button:hover {
     padding: 5px;
   }
 
-  .carta .informacion .informacion-1 .titulo {
+  .info__titulo {
     color: var(--color-letra);
   }
 
@@ -1034,12 +1079,12 @@ button:hover {
     padding: auto;
   }
 
-  .caracteristicas h5, .caracteristicas p {
+  .caracteristicas__tipo {
     width: 66vw;
     margin-bottom: 10px;
   }
 
-  .caracteristicas img {
+  .caracteristicas__casa {
     display: none;
   }
 
@@ -1047,11 +1092,11 @@ button:hover {
     margin: 15vw;
   }
 
-  .especie h5 {
+  .especie__h5 {
     margin-bottom: 10px;
   }
 
-  .especie .scroll {
+  .scroll {
     overscroll-behavior-x: contain;
     -ms-scroll-snap-type: x proximity;
     scroll-snap-type: x proximity;
@@ -1062,12 +1107,12 @@ button:hover {
     overflow-x: scroll;
   }
 
-  .especie .scroll img {
+  .scroll__img {
     width: 30vw;
     margin-right: 4vw;
   }
 
-  .especie #volver {
+  #volver {
     cursor: pointer;
     position: absolute;
     left: 20px;
@@ -1085,7 +1130,7 @@ button:hover {
   display: block;
 }
 
-.usuario .imagen-usuario {
+.imagen-usuario {
   height: 400px;
   border-bottom: 2px solid var(--color-letra);
   flex-direction: row;
@@ -1095,28 +1140,22 @@ button:hover {
   display: flex;
 }
 
-.usuario .imagen-usuario button {
+.btn--mediumDesktop--usuario {
   position: absolute;
-  top: 470px;
+  top: 450px;
   left: 25%;
 }
 
-.usuario hr {
-  width: 70%;
-  margin: 100px auto auto;
-  display: block;
-}
-
-.usuario .info-usuario {
+.info-usuario {
   margin: 40px;
 }
 
-.usuario .info-usuario h5 {
+.info-usuario__h5 {
   margin-bottom: 10px;
   margin-left: 10%;
 }
 
-.usuario .info-usuario button {
+.btn--mediumDesktop--info {
   margin: auto;
   display: block;
   position: relative;
@@ -1127,14 +1166,18 @@ button:hover {
   margin: 40px 40px 40px 10%;
 }
 
-.mostrar-favorito .lista img {
+.mostrar__lista {
+  display: flex;
+}
+
+.mostrar__lista__vecinos {
   width: 150px;
   height: auto;
   cursor: pointer;
   margin: 20px;
 }
 
-.logotipo img {
+.logotipo--logo {
   width: 210px;
   height: auto;
   margin: 10px;
@@ -1160,21 +1203,21 @@ button:hover {
   }
 }
 
-.error img {
+.error--tom {
   width: 250px;
   height: auto;
   margin: auto;
   display: block;
 }
 
-.error .dialogo {
+.dialogo {
   width: 90vw;
   height: 300px;
   position: absolute;
   top: 640px;
 }
 
-.error .dialogo h5 {
+.dialogo--h5 {
   width: 60%;
   height: 40px;
   text-align: center;
@@ -1185,17 +1228,18 @@ button:hover {
   display: block;
 }
 
-.error .dialogo p {
+#dialogo--error {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-align: center;
+  color: var(--color-letra-input);
   position: absolute;
   top: 125px;
   left: 50%;
 }
 
-.error .dialogo #respuesta {
+#dialogo--respuesta {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1207,10 +1251,10 @@ button:hover {
   text-decoration: underline;
   position: absolute;
   bottom: 280px;
-  left: 50%;
+  left: 70%;
 }
 
-.error .puntero {
+.error__puntero {
   width: 30px;
   height: auto;
   animation: 1s linear infinite slide;
@@ -1245,22 +1289,22 @@ button:hover {
 }
 
 @media screen and (max-width: 700px) {
-  .error .dialogo h5 {
+  .dialogo--h5 {
     width: 50%;
     margin-left: 15%;
     padding: 65px;
   }
 
-  .error .dialogo p {
+  .dialogo--error {
     top: 140px;
   }
 
-  .error .dialogo #respuesta {
+  #dialogo--respuesta {
     padding: 10px;
-    left: 45%;
+    left: 60%;
   }
 
-  .error .puntero {
+  .error__puntero {
     top: 610px;
     left: 50%;
   }
@@ -1276,7 +1320,9 @@ button:hover {
   }
 
   #nombrePersonaje {
-    width: 120px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     top: 630px;
     left: 15%;
     -webkit-transform: rotate(-7deg);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html tema="dia">
+<html tema="claro">
     <head>
         <meta charset="UTF-8">
         <title>Registro</title>
@@ -10,26 +10,26 @@
     <body>
         <header>
             <section class="header">
-                <img class="logo" src="/logo.b96f1e41.webp" onclick="location.href='index.html'">
-                <section class="inicioSesion">
-                    <button type="button" class="dia/noche"><img src="/sol.8f3b848b.png"></button>
+                <img class="header__logo" src="/logo.b96f1e41.webp" onclick="location.href='index.html'">
+                <section class="header__inicioSesion">
+                    <button type="button" class="btn--diaNoche"><img src="/sol.8f3b848b.png"></button>
                 </section>
             </section>
         </header>
 
         <main>
             <section class="formulario">
-                <h2>Registro de usuario</h2>
+                <h2 class="formulario__h2">Registro de usuario</h2>
                 <form>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="">
-                    <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required="">
-                    <input type="text" name="email" id="email" placeholder="Correo Electrónico" required="">
-                    <input type="text" name="numero" id="numero" placeholder="Número de teléfono" required="">
-                    <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required="">
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required="">
-                    <input type="password" name="repcontrasenia" id="repcontrasenia" placeholder="Repita la contraseña" required="">
+                    <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre" required="">
+                    <input class="formulario__input" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required="">
+                    <input class="formulario__input" type="text" name="email" id="email" placeholder="Correo Electrónico" required="">
+                    <input class="formulario__input" type="text" name="numero" id="numero" placeholder="Número de teléfono" required="">
+                    <input class="formulario__input" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required="">
+                    <input class="formulario__input" type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required="">
+                    <input class="formulario__input" type="password" name="repcontrasenia" id="repcontrasenia" placeholder="Repita la contraseña" required="">
 
-                    <button class="btn-medium-desktop" onclick="location.href='inicioSesion.html'">Regístrame</button>
+                    <button class="btn--mediumDesktop" onclick="location.href='inicioSesion.html'">Regístrame</button>
                 </form>
             </section>
 
@@ -38,11 +38,11 @@
 
         <footer>
             <section class="footer">
-                <img class="redes" src="/twitter.a11dcc2c.png" onclick="location.href='https://twitter.com/'">
-                <img class="redes" src="/discord.69df23ff.png" onclick="location.href='https://discord.com/'">
-                <img class="redes" src="/instagram.5d9e842b.png" onclick="location.href='https://www.instagram.com/'">
-                <img class="redes" src="/facebook.6114df0a.png" onclick="location.href='https://es-es.facebook.com/'">
-                <p><a href="/contacto.html">Contáctanos</a></p>
+                <img class="footer__redes" src="/twitter.a11dcc2c.png" onclick="location.href='https://twitter.com/'">
+                <img class="footer__redes" src="/discord.69df23ff.png" onclick="location.href='https://discord.com/'">
+                <img class="footer__redes" src="/instagram.5d9e842b.png" onclick="location.href='https://www.instagram.com/'">
+                <img class="footer__redes" src="/facebook.6114df0a.png" onclick="location.href='https://es-es.facebook.com/'">
+                <p class="footer__p"><a href="/contacto.html">Contáctanos</a></p>
             </section>
         </footer>
 

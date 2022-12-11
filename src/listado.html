@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html tema="dia">
+<html tema="claro">
     <head>
         <meta charset="UTF-8">
         <title>Listado</title>
@@ -12,129 +12,129 @@
         <header>
 
             <section class="header">
-                <img class="logo" src="assets/img/logo.webp" onclick="location.href='index.html'"'">
-                    <section class="headerbusqueda">
-                        <input  id="busqueda" type="text" placeholder="buscar...">
-                        <button class="busqueda"><img src="assets/img/Vector.png"></button>
-                        <img src="assets/img/corazon.png" class="corazon">
-                        <p class="fav">Favoritos</p>
-                        <img src="assets/img/Resetti.png" class="imagenRedonda" onclick="location.href='usuario.html'">
-                        <p onclick="location.href='usuario.html'">Usuario1</p>
-                        <button type="button" class="dia/noche"><img src="assets/img/sol.png"></button>
-                    </section>
+                <img class="header__logo" src="assets/img/logo.webp" onclick="location.href='index.html'"'">
+                <section class="headerbusqueda">
+                    <input  id="headerbusqueda--search" type="search" placeholder="buscar...">
+                    <button class="btn__headerbusqueda"><img id="header__busqueda__img" src="assets/img/Vector.png"></button>
+                    <img src="assets/img/corazon.png" class="headerbusqueda__img--favorito">
+                    <p class="headerbusqueda__p headerbusqueda__favorito">Favoritos</p>
+                    <img src="assets/img/Resetti.png" class="header--imagenRedonda" onclick="location.href='usuario.html'">
+                    <p class="headerbusqueda__p" onclick="location.href='usuario.html'">Usuario1</p>
+                    <button type="button" class="btn--diaNoche"><img src="assets/img/sol.png" class="imagenTema" ></button>
                 </section>
+            </section>
         </header>
 
         <main>
             <section class="filtrado">
-                <label for="filtrar">Filtrar por: </label>
-                    <select name="filtrar" id="filtrar">
-                        <option value="0"></option>
-                        <option value="Vecinos">Vecinos</option>
-                        <option value="Insectos">Insectos</option>
-                        <option value="Personajes">Personajes</option>
-                        <option value="Musica">Música</option>
-                        <option value="Fosiles">Fosiles</option>
-                        <option value="Peces">Peces</option>
-                        <option value="Obras">Obras de arte</option>
-                        <option value="Muebles">Muebles</option>
-                        <option value="Criaturas">Criaturas marinas</option>
-                        <option value="Ropa">Ropa</option>
-                        <option value="Herramientas">Herramientas</option>
-                        <option value="Eventos">Eventos</option>
+                <label class="filtrado__label" for="filtrar">Filtrar por: </label>
+                    <select class="filtrado__select" name="filtrar" id="filtrar">
+                        <option class="filtrado__opciones" value="0"></option>
+                        <option class="filtrado__opciones" value="Vecinos">Vecinos</option>
+                        <option class="filtrado__opciones" value="Insectos">Insectos</option>
+                        <option class="filtrado__opciones" value="Personajes">Personajes</option>
+                        <option class="filtrado__opciones" value="Musica">Música</option>
+                        <option class="filtrado__opciones" value="Fosiles">Fosiles</option>
+                        <option class="filtrado__opciones" value="Peces">Peces</option>
+                        <option class="filtrado__opciones" value="Obras">Obras de arte</option>
+                        <option class="filtrado__opciones" value="Muebles">Muebles</option>
+                        <option class="filtrado__opciones" value="Criaturas">Criaturas marinas</option>
+                        <option class="filtrado__opciones" value="Ropa">Ropa</option>
+                        <option class="filtrado__opciones" value="Herramientas">Herramientas</option>
+                        <option class="filtrado__opciones" value="Eventos">Eventos</option>
                     </select>
             </section>
 
             <section class="lista">
-                <article class="col-0">
-                    <img src="assets/img/miranda 1.png" class="vecinos">
+                <article class="lista__col-0">
+                    <img src="assets/img/miranda 1.png" class="lista__vecinos">
                     <h5><img src="assets/img/duck.png" class="icono">Miranda</h5>
                     <p class="info">Cumpleaños: 23/04.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Gonzo.png" class="vecinos">
+                    <img src="assets/img/Gonzo.png" class="lista__vecinos">
                     <h5><img src="assets/img/Koala-icon.png" class="icono">Gonzo</h5>
                     <p class="info">Cumpleaños: 11/04.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                     
-                    <img src="assets/img/Carpa.png" class="peces">
+                    <img src="assets/img/Carpa.png" class="lista__peces">
                     <h5><img src="assets/img/Carpa_icon.png" class="icono">Carpa</h5>
-                    <p class="info">Época : todo el año.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Época: todo el año.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Al_volante.webp" class="musica">
+                    <img src="assets/img/Al_volante.webp" class="lista__musica">
                     <h5><img src="assets/img/Musica-icon.png" class="icono">Al volante</h5>
-                    <p class="info">Estilo : Desconocido.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Estilo: Desconocido.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
 
                 </article>
 
-                <article class="col-1">
-                    <img src="assets/img/eloise.png" class="vecinos">
+                <article class="lista__col-1">
+                    <img src="assets/img/eloise.png" class="lista__vecinos">
                     <h5><img src="assets/img/elefante-icon.png" class="icono">Eloise</h5>
                     <p class="info">Cumpleaños: 23/04.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Rod.png" class="vecinos">
+                    <img src="assets/img/Rod.png" class="lista__vecinos">
                     <h5><img src="assets/img/rata-icon.png" class="icono">Rod</h5>
                     <p class="info">Cumpleaños: 11/04.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Langosta.png" class="insectos">
+                    <img src="assets/img/Langosta.png" class="lista__insectos">
                     <h5><img src="assets/img/langosta-icon 1.png" class="icono">Langosta</h5>
-                    <p class="info">Época : 08/09.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Época: 08/09.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Tota-pop.webp" class="musica">
+                    <img src="assets/img/Tota-pop.webp" class="lista__musica">
                     <h5><img src="assets/img/Musica-icon.png" class="icono">Tota-pop</h5>
-                    <p class="info">Estilo : de cuento.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Estilo: de cuento.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
                 </article>
                 
-                <article class="col-2">
-                    <img src="assets/img/Fauna.png" class="vecinos">
+                <article class="lista__col-2">
+                    <img src="assets/img/Fauna.png" class="lista__vecinos">
                     <h5><img src="assets/img/ciervo-icon.png" class="icono">Fauna</h5>
                     <p class="info">Cumpleaños: 23/04.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Goldfish.png" class="peces">
+                    <img src="assets/img/Goldfish.png" class="lista__peces">
                     <h5><img src="assets/img/Goldfish_Icon.png" class="icono">Goldfish</h5>
                     <p class="info">Época: todo el año.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Polilla.png" class="insectos">
+                    <img src="assets/img/Polilla.png" class="lista__insectos">
                     <h5><img src="assets/img/polilla-icon.png" class="icono">Polilla</h5>
                     <p class="info">Época: Verano.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Tota-desfile.webp" class="musica">
+                    <img src="assets/img/Tota-desfile.webp" class="lista__musica">
                     <h5><img src="assets/img/Musica-icon.png" class="icono">Tota-desfile </h5>
-                    <p class="info">Estilo : de cómic.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Estilo: de cómic.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
                 </article>
 
-                <article class="col-3">
-                    <img src="assets/img/friga.png" class="vecinos">
+                <article class="lista__col-3">
+                    <img src="assets/img/friga.png" class="lista__vecinos">
                     <h5><img src="assets/img/Pinguino-icon 1.png" class="icono">Friga</h5>
                     <p class="info">Cumpleaños: 23/04.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/koi.png" class="peces">
+                    <img src="assets/img/koi.png" class="lista__peces">
                     <h5><img src="assets/img/Koi_icon.png" class="icono">Koi</h5>
-                    <p class="info">Época : todo el año.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Época: todo el año.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/Avispa.png" class="insectos">
+                    <img src="assets/img/Avispa.png" class="lista__insectos">
                     <h5><img src="assets/img/avispa-icon.png" class="icono">Avista</h5>
-                    <p class="info">Época : todo el año.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <p class="info">Época: todo el año.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
                 
-                    <img src="assets/img/ciudad_animal.png" class="musica">
-                    <h5 id="ciudad-animal"><img src="assets/img/Musica-icon.png" class="icono">Ciudad animal</h5>
-                    <p class="info">Estilo : Antiguo,urbano.</p>
-                    <button type="button" class="btn-small" onclick="location.href='producto.html'"">Ver</button>
+                    <img src="assets/img/ciudad_animal.png" class="lista__musica">
+                    <h5 id="lista--ciudad-animal"><img src="assets/img/Musica-icon.png" class="icono">Ciudad animal</h5>
+                    <p class="info">Estilo: Antiguo,urbano.</p>
+                    <button type="button" class="lista__boton btn--small" onclick="location.href='producto.html'"">Ver</button>
     
                 </article>
             </section>
@@ -143,11 +143,11 @@
  
         <footer>
             <section class="footer">
-                <img class="redes" src="assets/img/twitter.png" onclick="location.href='https://twitter.com/'">
-                <img class="redes" src="assets/img/discord.png" onclick="location.href='https://discord.com/'">
-                <img class="redes" src="assets/img/instagram.png" onclick="location.href='https://www.instagram.com/'">
-                <img class="redes" src="assets/img/facebook.png" onclick="location.href='https://es-es.facebook.com/'">
-                <p><a href="contacto.html">Contáctanos</a></p>
+                <img class="footer__redes" src="assets/img/twitter.png" onclick="location.href='https://twitter.com/'">
+                <img class="footer__redes" src="assets/img/discord.png" onclick="location.href='https://discord.com/'">
+                <img class="footer__redes" src="assets/img/instagram.png" onclick="location.href='https://www.instagram.com/'">
+                <img class="footer__redes" src="assets/img/facebook.png" onclick="location.href='https://es-es.facebook.com/'">
+                <p class="footer__p"><a href="contacto.html">Contáctanos</a></p>
             </section>
         </footer>
 

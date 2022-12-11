@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html tema="dia">
+<html tema="claro">
     <head>
         <meta charset="UTF-8">
         <title>Animal Crossing Wiki</title>
@@ -14,42 +14,45 @@
     <body>
         <header>
             <section class="header">
-                <img class="logo" src="/logo.b96f1e41.webp">
-                    <section class="inicioSesion">
+                <img class="header__logo" src="/logo.b96f1e41.webp">
+                    <section class="header__inicioSesion">
                         <img src="/persona.187d5990.png" onclick="location.href='inicioSesion.html'">
                         <p><a href="/inicioSesion.html">Iniciar Sesión</a></p>
-                        <button type="button" class="dia/noche"><img src="/sol.8f3b848b.png"></button>
+                        <button type="button" class="btn--diaNoche"><img src="/sol.8f3b848b.png"></button>
                     </section>
                 </section>
         </header>
 
         <main>
+            <audio autoplay="" loop="">
+                <source src="/Animal%20Crossing%20-%20Bubblegum%20K.K.%20[Remix].96ea1bde.mp3" type="audio/mp3">
+            </audio>
+
             <section class="inicio">
-                <section class="imagen2">
-                    <img src="/foto3.e712ced9.jpg" alt="Imagen del juego animal Crossing New Horizons">
+                <section class="inicio__imagen2">
+                    <img id="inicio__imagen2--juego" src="/foto3.e712ced9.jpg" alt="Imagen del juego animal Crossing New Horizons">
                 </section>
-                <section class="personaje">
-                    <img class="personajes" id="isabelle" src="/isabelle2.c4f40fcc.png" alt="Imagen del personaje Isabelle">
-                    <img class="personajes" src="/Tom_Nook.cc66fa2e.webp" alt="Imagen del personajes Tom Nook">
+                <section class="inicio__personaje">
+                    <img class="personaje__personajes" id="personaje__personajes--isabelle" src="/isabelle2.c4f40fcc.png" alt="Imagen del personaje Isabelle">
+                    <img class="personaje__personajes" src="/Tom_Nook.cc66fa2e.webp" alt="Imagen del personajes Tom Nook">
                 </section>
-                <section class="bienvenida">
-                    <h1>Animal Crossing Wiki</h1>
-                    <p class="p-desktop">Bienvenid@ a la wiki de Animal Crossing 
+                <section class="inicio__bienvenida">
+                    <h1 id="inicio__bienvenida--h1">Animal Crossing Wiki</h1>
+                    <p class="p-desktop inicio__bienvenida--p">Bienvenid@ a la wiki de Animal Crossing 
                         donde podrás encontrar toda la información 
                         relativa al juego de Animal Crossing New 
                         Horizon,como los personajes, fósiles, peces, 
                         insectos,obras de arte, música ...
                     </p>
-                     <button class="btn-large-desktop" onclick="location.href='listado.html'">Ir a la página</button>                    
-                     <section class="redesSociales">
-                        <img class="redes" src="/twitter.a11dcc2c.png" onclick="location.href='https://twitter.com/'">
-                        <img class="redes" src="/discord.69df23ff.png" onclick="location.href='https://discord.com/'">
-                        <img class="redes" src="/instagram.5d9e842b.png" onclick="location.href='https://www.instagram.com/'">
-                        <img class="redes" src="/facebook.6114df0a.png" onclick="location.href='https://es-es.facebook.com/'">
+                     <button class="btn--largeDesktop" onclick="location.href='listado.html'">Ir a la página</button>                    
+                     <section class="inicio__redesSociales">
+                        <img class="inicio__redesSociale__redes" src="/twitter.a11dcc2c.png" onclick="location.href='https://twitter.com/'">
+                        <img class="inicio__redesSociale__redes" src="/discord.69df23ff.png" onclick="location.href='https://discord.com/'">
+                        <img class="inicio__redesSociale__redes" src="/instagram.5d9e842b.png" onclick="location.href='https://www.instagram.com/'">
+                        <img class="inicio__redesSociale__redes" src="/facebook.6114df0a.png" onclick="location.href='https://es-es.facebook.com/'">
                     </section>
                 </section>
             </section>
-
         </main>
 
     <script src="/diw-UT4-AnimalCrossingWiki.59712999.js"></script></body>
