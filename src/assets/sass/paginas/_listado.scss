@@ -47,20 +47,20 @@
 }
 
 #lista--ciudad-animal{
-    width: 230px;
+    width: max-content;
 }
 
+.lista__p{
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
 
 .icono{
     width: 25px;
     margin-right: 10px;
 }
 
-.info{
-    font-size: 15px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
 
 .lista__boton{
     margin-left: 15%;

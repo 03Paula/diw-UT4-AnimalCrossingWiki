@@ -2,8 +2,8 @@
 //Hoja de estilo para la página del producto.
 @media screen and (min-width:1075px){
     .carta{
-        width: 75vw;
-        height: 550px;
+        width: 80vw;
+        height: 600px;
         margin: 120px;
         padding: 30px;
         background-color: var(--color-input);
@@ -63,7 +63,7 @@
         justify-content: space-evenly;
         align-items: center;
         margin: 20px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
     }
 
     #genero {
@@ -156,7 +156,7 @@
 
     .carta{
         width: 75vw;
-        height: 920px;
+        height: 980px;
         display: block;
         margin: auto;
         margin-top: 80px;
@@ -260,6 +260,7 @@
 
     .caracteristicas{
         margin: 15vw;
+        margin-top: 60px;
     }
 
     .caracteristicas__tipo{
