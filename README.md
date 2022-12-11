@@ -9,19 +9,28 @@ Una vez allí podremos visualizar las distintas páginas.
 Para acceder a la página de error 404 -> localhost:1234/404.html
 
 ## Formas de incluir css.
+Existen 2 formas de incluir css de forma directa.
 ### Estilo inline :
 Mediante la etiqueta style dentro del elemento. Ejemplo :
 
 ![image](https://user-images.githubusercontent.com/92334866/206875828-56c1ab7a-ffcb-4c48-aaa9-0e35a015a73c.png)
 
 ### Incrustado en la cabecera :
+Con la etiqueta style en el head. Ejemplo:
 
 ![image](https://user-images.githubusercontent.com/92334866/206875862-16b4a2c2-071c-4920-aef8-abdfbce2ed4f.png)
 
-### En hojas de estilo externas :
-Con la etiqueta link en el head de la página. Ejemplo : 
+Ambas formas limitan la reutilización de los estilos, para el estilo inline solo tendrá el estilo ese único elemento sin posibilidad reutilizarlo para otro elemento que tenga los mismo estilos, sin embargo si lo incrustamos en la cabecera podremos reutilizar los estilos pero sólo para los elementos de esa página.
+Lo recomendado es realizar los estilos en hojas de estilos externas y mediante la etiqueta link asociarlo a las páginas, de este modo puede ser reutilizado en múltiples páginas. Ejemplo:
 
-![image](https://user-images.githubusercontent.com/92334866/206876251-fc1ac5cc-6636-4bc0-a9c8-926b506b794c.png)
+![image](https://user-images.githubusercontent.com/92334866/206923151-1de1741d-9121-4a4f-af27-fc103b752b67.png)
+
+## Validación del css
+
+![validar-css](https://user-images.githubusercontent.com/92334866/206923222-a6d455ae-39e8-4417-b3c6-e4a37df1f875.png)
+
+
+
 
 
 
